@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		AE88294C1F05AD210076E520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88294B1F05AD210076E520 /* AppDelegate.swift */; };
-		AE88294E1F05AD210076E520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88294D1F05AD210076E520 /* ViewController.swift */; };
 		AE8829511F05AD210076E520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE88294F1F05AD210076E520 /* Main.storyboard */; };
 		AE8829541F05AD210076E520 /* Bandz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */; };
 		AE8829561F05AD210076E520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8829551F05AD210076E520 /* Assets.xcassets */; };
 		AE8829591F05AD210076E520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8829571F05AD210076E520 /* LaunchScreen.storyboard */; };
+		AE8829611F05AF4B0076E520 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829601F05AF4B0076E520 /* FeedVC.swift */; };
+		AE8829641F05AF8D0076E520 /* ShowCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829621F05AF8D0076E520 /* ShowCardCell.swift */; };
+		AE8829651F05AF8D0076E520 /* ShowCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8829631F05AF8D0076E520 /* ShowCardCell.xib */; };
+		AE88296A1F05B3EB0076E520 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829691F05B3EB0076E520 /* Band.swift */; };
+		AE88296F1F05CBF90076E520 /* DetalheShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88296E1F05CBF90076E520 /* DetalheShowVC.swift */; };
+		AE8829711F05CD140076E520 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829701F05CD140076E520 /* Show.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE8829481F05AD210076E520 /* Bandz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE88294B1F05AD210076E520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE88294D1F05AD210076E520 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE8829501F05AD210076E520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE8829531F05AD210076E520 /* Bandz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bandz.xcdatamodel; sourceTree = "<group>"; };
 		AE8829551F05AD210076E520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE8829581F05AD210076E520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE88295A1F05AD210076E520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8829601F05AF4B0076E520 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedVC.swift; path = ../FeedVC.swift; sourceTree = "<group>"; };
+		AE8829621F05AF8D0076E520 /* ShowCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCardCell.swift; sourceTree = "<group>"; };
+		AE8829631F05AF8D0076E520 /* ShowCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCardCell.xib; sourceTree = "<group>"; };
+		AE8829691F05B3EB0076E520 /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
+		AE88296E1F05CBF90076E520 /* DetalheShowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalheShowVC.swift; path = ../DetalheShowVC.swift; sourceTree = "<group>"; };
+		AE8829701F05CD140076E520 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +67,51 @@
 			isa = PBXGroup;
 			children = (
 				AE88294B1F05AD210076E520 /* AppDelegate.swift */,
-				AE88294D1F05AD210076E520 /* ViewController.swift */,
-				AE88294F1F05AD210076E520 /* Main.storyboard */,
+				AE88296B1F05B93D0076E520 /* Util */,
+				AE8829681F05B3B80076E520 /* Model */,
+				AE8829671F05B3B40076E520 /* View */,
+				AE8829661F05B3A90076E520 /* Controller */,
 				AE8829551F05AD210076E520 /* Assets.xcassets */,
-				AE8829571F05AD210076E520 /* LaunchScreen.storyboard */,
-				AE88295A1F05AD210076E520 /* Info.plist */,
-				AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */,
 			);
 			path = Bandz;
+			sourceTree = "<group>";
+		};
+		AE8829661F05B3A90076E520 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE88296E1F05CBF90076E520 /* DetalheShowVC.swift */,
+				AE8829601F05AF4B0076E520 /* FeedVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AE8829671F05B3B40076E520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE8829631F05AF8D0076E520 /* ShowCardCell.xib */,
+				AE88294F1F05AD210076E520 /* Main.storyboard */,
+				AE8829571F05AD210076E520 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AE8829681F05B3B80076E520 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE8829621F05AF8D0076E520 /* ShowCardCell.swift */,
+				AE8829691F05B3EB0076E520 /* Band.swift */,
+				AE8829701F05CD140076E520 /* Show.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AE88296B1F05B93D0076E520 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */,
+				AE88295A1F05AD210076E520 /* Info.plist */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8829651F05AF8D0076E520 /* ShowCardCell.xib in Resources */,
 				AE8829591F05AD210076E520 /* LaunchScreen.storyboard in Resources */,
 				AE8829561F05AD210076E520 /* Assets.xcassets in Resources */,
 				AE8829511F05AD210076E520 /* Main.storyboard in Resources */,
@@ -140,8 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8829641F05AF8D0076E520 /* ShowCardCell.swift in Sources */,
+				AE8829611F05AF4B0076E520 /* FeedVC.swift in Sources */,
+				AE88296A1F05B3EB0076E520 /* Band.swift in Sources */,
+				AE88296F1F05CBF90076E520 /* DetalheShowVC.swift in Sources */,
+				AE8829711F05CD140076E520 /* Show.swift in Sources */,
 				AE8829541F05AD210076E520 /* Bandz.xcdatamodeld in Sources */,
-				AE88294E1F05AD210076E520 /* ViewController.swift in Sources */,
 				AE88294C1F05AD210076E520 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
