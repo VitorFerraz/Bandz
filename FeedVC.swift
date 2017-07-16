@@ -14,6 +14,8 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
   
   ////
   var raboDeGato = Band(codigoDaBanda: 1,banda: "Rabo de Gato", estilo: "Punk")
+  
+  
   var raboDeGato2 = Band(codigoDaBanda: 2,banda: "Rabo de Gato", estilo: "Rock")
   var raboDeGato3 = Band(codigoDaBanda: 3,banda: "Rabo de Gato", estilo: "Axe")
   var raboDeGato4 = Band(codigoDaBanda: 4,banda: "Rabo de Gato", estilo: "Indie")
@@ -28,6 +30,7 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+     
      arrayBands.append(contentsOf: [raboDeGato,raboDeGato2,raboDeGato3,raboDeGato4])
     }
 
@@ -47,8 +50,9 @@ class FeedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
    
         let cell = Bundle.main.loadNibNamed("ShowCardCell", owner: self, options: nil)?.first as! ShowCardCell
-        cell.nomeBanda.text = arrayBands[indexPath.row].nome
-        cell.genero.text = arrayBands[indexPath.row].estilo
+        cell.nomeVenue.text = arrayBands[indexPath.row].nome
+        cell.genero1.text = arrayBands[indexPath.row].estilo
+      cell.imgBand.image = arrayBands[indexPath.row].logo
 
         return cell
     }

@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		454DF11234D68B5322263CC5 /* Pods_Bandz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA84161C9FFCD084352AFA4 /* Pods_Bandz.framework */; };
-		AE3FE3721F18229C00B3364B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3FE3711F18229C00B3364B /* Login.storyboard */; };
 		AE3FE3741F18277A00B3364B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FE3731F18277A00B3364B /* LoginVC.swift */; };
 		AE3FE3771F18559800B3364B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE3FE3761F18559800B3364B /* GoogleService-Info.plist */; };
+		AE3FE37A1F197BFD00B3364B /* logo1bandz.png in Resources */ = {isa = PBXBuildFile; fileRef = AE3FE3791F197BFD00B3364B /* logo1bandz.png */; };
 		AE88294C1F05AD210076E520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88294B1F05AD210076E520 /* AppDelegate.swift */; };
 		AE8829511F05AD210076E520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE88294F1F05AD210076E520 /* Main.storyboard */; };
 		AE8829541F05AD210076E520 /* Bandz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */; };
@@ -28,10 +28,10 @@
 		10EFD39D933AACA576A190CC /* Pods-Bandz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bandz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bandz/Pods-Bandz.release.xcconfig"; sourceTree = "<group>"; };
 		69820BC968A0E9AFDBF1D2F0 /* Pods-Bandz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bandz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bandz/Pods-Bandz.debug.xcconfig"; sourceTree = "<group>"; };
 		6AA84161C9FFCD084352AFA4 /* Pods_Bandz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bandz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE3FE3711F18229C00B3364B /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		AE3FE3731F18277A00B3364B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AE3FE3751F182E6000B3364B /* Bandz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bandz.entitlements; sourceTree = "<group>"; };
 		AE3FE3761F18559800B3364B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AE3FE3791F197BFD00B3364B /* logo1bandz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1bandz.png; sourceTree = "<group>"; };
 		AE8829481F05AD210076E520 /* Bandz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE88294B1F05AD210076E520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE8829501F05AD210076E520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +68,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AE3FE3781F197BE000B3364B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AE3FE3791F197BFD00B3364B /* logo1bandz.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		AE88293F1F05AD210076E520 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				AE3FE3751F182E6000B3364B /* Bandz.entitlements */,
+				AE3FE3781F197BE000B3364B /* Images */,
 				AE88294B1F05AD210076E520 /* AppDelegate.swift */,
 				AE88296B1F05B93D0076E520 /* Util */,
 				AE8829681F05B3B80076E520 /* Model */,
@@ -115,7 +124,6 @@
 			children = (
 				AE8829631F05AF8D0076E520 /* ShowCardCell.xib */,
 				AE88294F1F05AD210076E520 /* Main.storyboard */,
-				AE3FE3711F18229C00B3364B /* Login.storyboard */,
 				AE8829571F05AD210076E520 /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -217,10 +225,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3FE37A1F197BFD00B3364B /* logo1bandz.png in Resources */,
 				AE8829651F05AF8D0076E520 /* ShowCardCell.xib in Resources */,
 				AE8829591F05AD210076E520 /* LaunchScreen.storyboard in Resources */,
 				AE8829561F05AD210076E520 /* Assets.xcassets in Resources */,
-				AE3FE3721F18229C00B3364B /* Login.storyboard in Resources */,
 				AE8829511F05AD210076E520 /* Main.storyboard in Resources */,
 				AE3FE3771F18559800B3364B /* GoogleService-Info.plist in Resources */,
 			);
