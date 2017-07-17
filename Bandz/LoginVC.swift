@@ -9,9 +9,14 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import FirebaseAuth
 
 class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
 
+  @IBOutlet weak var emailTxt: UITextField!
+  @IBOutlet weak var passwordTxt: UITextField!
+  @IBOutlet weak var customBtnFBLogin: UIButton!
+  var user:Any?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,9 +25,9 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
       //TODO: Change to constrains
       loginButton.frame = CGRect(x: 16, y: 400, width: view.frame.width - 32, height: 50)
    
-       view.addSubview(loginButton)
+       //view.addSubview(loginButton)
       
-      //let leadingConstraint = loginButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
+      customBtnFBLogin.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
       
       loginButton.delegate = self
       loginButton.readPermissions = ["email","public_profile"]
@@ -31,6 +36,20 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
 
   }
   
+  func handleCustomFBLogin(){
+    FBSDKLoginManager().logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) in
+      if error != nil{
+        print("Custom fb login failed",error ?? "")
+        return
+      }
+      print(result?.token.tokenString)
+      self.user = result
+      self.showEmail()
+      self.logged()
+
+      
+    }
+  }
   func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
     print("Did log out of facebook")
   }
@@ -41,7 +60,10 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
       return
     }
     print("Successfully logged in with facebook...")
+    self.user = result
     showEmail()
+    self.logged()
+
   }
   
   func showEmail(){
@@ -65,26 +87,51 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
       }
       
       print(result ?? "")
+      self.user = result
+      self.logged()
+
     }
 
   }
   
+  @IBAction func createAccount(_ sender: UIButton) {
+    if let email = emailTxt.text, let password = passwordTxt.text{
+      FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+        if let fireBaseError = error{
+          print(fireBaseError.localizedDescription)
+          return
+        }
+        
+        print("You created a new account")
+        self.user = user
+        self.logged()
+
+      })
+    }
+  }
   
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+  @IBAction func loginAccount(_ sender: UIButton) {
+    if let email = emailTxt.text, let password = passwordTxt.text{
+        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+          if let fireBaseError = error{
+            print(fireBaseError.localizedDescription)
+            return
+          }
+          
+          print("You sing in with your account")
+          self.user = user
+          self.logged()
+          
+        })
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+  }
+  
+  func logged(){
+    if user != nil{
+      performSegue(withIdentifier: "BandzApp", sender: Any?.self)
     }
-    */
+  }
+  
+  
 
 }
