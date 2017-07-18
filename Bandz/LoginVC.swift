@@ -42,7 +42,7 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
         print("Custom fb login failed",error ?? "")
         return
       }
-      print(result?.token.tokenString)
+      print(result?.token.tokenString ?? "")
       self.user = result
       self.showEmail()
       self.logged()
