@@ -9,6 +9,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="mNX-ex-k4W">
+            <objects>
+                <viewController id="1q6-rX-sMl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4oI-fu-MSN"/>
+                        <viewControllerLayoutGuide type="bottom" id="eiq-xv-dMS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kH4-yC-3lP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miY-MA-mHF">
+                                <rect key="frame" x="71" y="150" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Perfil Banda"/>
+                                <connections>
+                                    <segue destination="wd1-TB-ca7" kind="show" id="fLQ-OB-aWT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqT-ZQ-EQV">
+                                <rect key="frame" x="80" y="210" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Perfil Fan"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zW-lz-2t7">
+                                <rect key="frame" x="83" y="301" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Perfil Venue"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMj-zO-0kF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-419" y="37"/>
+        </scene>
         <!--Descubra-->
         <scene sceneID="Vth-aB-nlI">
             <objects>
@@ -48,7 +86,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zTN-QE-l6f" id="LnJ-Gz-HMS">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="180.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5C-16-72u">
@@ -143,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKj-YS-oyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="-512.32394366197184"/>
+            <point key="canvasLocation" x="1144" y="-795"/>
         </scene>
         <!--Detalhe ShowVC-->
         <scene sceneID="j5s-xd-hUg">
@@ -179,7 +217,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9zc-2g-Nj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-450" y="71"/>
+            <point key="canvasLocation" x="377" y="-541"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="IVb-oK-FAX">
@@ -307,7 +345,7 @@
                         <outlet property="customBtnFBLogin" destination="JJk-Te-P2l" id="vDd-ja-PiS"/>
                         <outlet property="emailTxt" destination="08m-Tt-3CI" id="4lW-KM-isM"/>
                         <outlet property="passwordTxt" destination="vFa-G3-K6J" id="guH-ds-fh5"/>
-                        <segue destination="wd1-TB-ca7" kind="show" identifier="BandzApp" id="P5H-dB-rL8"/>
+                        <segue destination="1q6-rX-sMl" kind="show" identifier="home" id="Okb-wr-XpK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIt-oK-sDX" userLabel="First Responder" sceneMemberID="firstResponder"/>

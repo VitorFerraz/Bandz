@@ -128,7 +128,7 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
   
   func logged(){
     if user != nil{
-      performSegue(withIdentifier: "BandzApp", sender: Any?.self)
+      performSegue(withIdentifier: "home", sender: Any?.self)
     }
   }
   
