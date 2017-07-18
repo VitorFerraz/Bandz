@@ -19,5 +19,6 @@ class Band{
     self.id = id
     self.nome = nome
     self.estilo = estilo
+    self.logo = UIImage(named: "logo1bandz.png")
   }
 }
