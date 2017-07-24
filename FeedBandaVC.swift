@@ -23,6 +23,7 @@ class FeedBandaVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
       store.carregaShows()
+      self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
 
 
@@ -44,7 +45,7 @@ class FeedBandaVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
       cell.logoVenue.image = store.listaShows[indexPath.row].logo
       cell.nomeVenue.text = store.listaShows[indexPath.row].nomeHost
-      cell.tipoLugar.text = store.listaShows[indexPath.row].tipoLugar
+     // cell.tipoLugar.text = store.listaShows[indexPath.row].tipoLugar
       cell.endereco.text = store.listaShows[indexPath.row].endereco
       cell.data.text = store.listaShows[indexPath.row].data
       cell.estilo1.text = store.listaShows[indexPath.row].estilos[0]
