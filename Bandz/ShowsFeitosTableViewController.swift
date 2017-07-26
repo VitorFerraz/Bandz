@@ -13,8 +13,9 @@ class ShowsFeitosTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      self.navigationController?.hidesBarsOnSwipe = true
 
-    }
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,7 +36,7 @@ class ShowsFeitosTableViewController: UITableViewController {
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ShowsTableView.dequeueReusableCell(withIdentifier: "ShowsCell", for: indexPath) as! ShowsFeitosVenueCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShowsCell", for: indexPath) as! ShowsFeitosVenueCell
       
       cell.imageShow.image = #imageLiteral(resourceName: "casa_show")
          

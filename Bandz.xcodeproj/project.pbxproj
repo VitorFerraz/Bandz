@@ -22,10 +22,11 @@
 		AE8829541F05AD210076E520 /* Bandz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */; };
 		AE8829561F05AD210076E520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8829551F05AD210076E520 /* Assets.xcassets */; };
 		AE8829591F05AD210076E520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8829571F05AD210076E520 /* LaunchScreen.storyboard */; };
-		AE8829611F05AF4B0076E520 /* FeedBandaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829601F05AF4B0076E520 /* FeedBandaVC.swift */; };
+		AE8829611F05AF4B0076E520 /* FeedBandaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829601F05AF4B0076E520 /* FeedBandaViewController.swift */; };
 		AE88296A1F05B3EB0076E520 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829691F05B3EB0076E520 /* Band.swift */; };
 		AE8829711F05CD140076E520 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829701F05CD140076E520 /* Show.swift */; };
 		AEAE2C691F256E4500F13FA0 /* ShowDetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */; };
+		AEAE2C911F27FE5C00F13FA0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE2C901F27FE5C00F13FA0 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,10 +50,11 @@
 		AE8829551F05AD210076E520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE8829581F05AD210076E520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE88295A1F05AD210076E520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE8829601F05AF4B0076E520 /* FeedBandaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedBandaVC.swift; path = ../FeedBandaVC.swift; sourceTree = "<group>"; };
+		AE8829601F05AF4B0076E520 /* FeedBandaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedBandaViewController.swift; path = ../FeedBandaViewController.swift; sourceTree = "<group>"; };
 		AE8829691F05B3EB0076E520 /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
 		AE8829701F05CD140076E520 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetalheViewController.swift; sourceTree = "<group>"; };
+		AEAE2C901F27FE5C00F13FA0 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				AE3FE3751F182E6000B3364B /* Bandz.entitlements */,
 				AE88294B1F05AD210076E520 /* AppDelegate.swift */,
 				AE3FE3D21F1D9E7A00B3364B /* GlobalClasses.swift */,
+				AEAE2C901F27FE5C00F13FA0 /* APIManager.swift */,
 				AE3FE4491F2037C800B3364B /* Lib */,
 				AE88296B1F05B93D0076E520 /* Util */,
 				AE8829681F05B3B80076E520 /* Model */,
@@ -127,7 +130,7 @@
 				AE5C74D11F22E2B1007076B3 /* InfoVenueViewController.swift */,
 				AE3FE44C1F203BDF00B3364B /* ViewController.swift */,
 				AE3FE44A1F203A5000B3364B /* UIView+constraints.swift */,
-				AE8829601F05AF4B0076E520 /* FeedBandaVC.swift */,
+				AE8829601F05AF4B0076E520 /* FeedBandaViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -299,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE8829611F05AF4B0076E520 /* FeedBandaVC.swift in Sources */,
+				AE8829611F05AF4B0076E520 /* FeedBandaViewController.swift in Sources */,
 				AE3FE3741F18277A00B3364B /* LoginVC.swift in Sources */,
 				AE88296A1F05B3EB0076E520 /* Band.swift in Sources */,
 				AE3FE3D51F1DA14300B3364B /* ShowsForBandCell.swift in Sources */,
@@ -311,6 +314,7 @@
 				AE3FE44D1F203BDF00B3364B /* ViewController.swift in Sources */,
 				AE5C74D21F22E2B1007076B3 /* InfoVenueViewController.swift in Sources */,
 				AE3FE3D31F1D9E7A00B3364B /* GlobalClasses.swift in Sources */,
+				AEAE2C911F27FE5C00F13FA0 /* APIManager.swift in Sources */,
 				AE8829541F05AD210076E520 /* Bandz.xcdatamodeld in Sources */,
 				AE88294C1F05AD210076E520 /* AppDelegate.swift in Sources */,
 			);

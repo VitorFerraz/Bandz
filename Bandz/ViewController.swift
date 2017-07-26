@@ -13,8 +13,8 @@ class ViewController: UIViewController,PagingOptions {
     let secondViewController = storyboard.instantiateViewController(withIdentifier: "ShowsFeitosVenueViewController")
     let thirdViewController = storyboard.instantiateViewController(withIdentifier: "ContatoVenueViewController")
     
+
     
-      
     // Initialize a FixedPagingViewController and pass
     // in the view controllers.
     let pagingViewController = FixedPagingViewController(viewControllers: [

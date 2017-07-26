@@ -30,7 +30,7 @@ extension UIView {
       relatedBy: .equal,
       toItem: nil,
       attribute: .notAnAttribute,
-      multiplier: 1.0,
+      multiplier: 1,
       constant: subview.frame.height)
     
     let widthContraint = NSLayoutConstraint(

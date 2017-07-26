@@ -20,6 +20,7 @@ class ShowDetalheViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationController?.hidesBarsOnSwipe = true
     
   }
   
