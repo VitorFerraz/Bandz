@@ -9,18 +9,23 @@
 import UIKit
 
 
-class InfoVenueViewController: UIViewController {
+class InfoVenueViewController: UIViewController{
 
 
   
   //MARK: -  Outlets
-  
+ 
   //MARK: -  Propriedades
+    var itemIndex = 0
+    var imageName = "casa_show2.jpeg"
+    var contentImagens = [ "casa_show2.jpeg",  "casa_show.jpeg"]
   
   //MARK: -  ViewLifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+
     
   }
   
@@ -31,6 +36,7 @@ class InfoVenueViewController: UIViewController {
   //MARK: -  Métodos
   
   //MARK: -  Actions
+
 
 
 

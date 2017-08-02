@@ -78,13 +78,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		AE3FE4491F2037C800B3364B /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Lib;
-			sourceTree = "<group>";
-		};
 		AE88293F1F05AD210076E520 = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +99,13 @@
 		AE88294A1F05AD210076E520 /* Bandz */ = {
 			isa = PBXGroup;
 			children = (
+				AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */,
+				AE88295A1F05AD210076E520 /* Info.plist */,
+				AE3FE3761F18559800B3364B /* GoogleService-Info.plist */,
 				AE3FE3751F182E6000B3364B /* Bandz.entitlements */,
 				AE88294B1F05AD210076E520 /* AppDelegate.swift */,
 				AE3FE3D21F1D9E7A00B3364B /* GlobalClasses.swift */,
 				AEAE2C901F27FE5C00F13FA0 /* APIManager.swift */,
-				AE3FE4491F2037C800B3364B /* Lib */,
-				AE88296B1F05B93D0076E520 /* Util */,
 				AE8829681F05B3B80076E520 /* Model */,
 				AE8829671F05B3B40076E520 /* View */,
 				AE8829661F05B3A90076E520 /* Controller */,
@@ -152,16 +146,6 @@
 				AE8829701F05CD140076E520 /* Show.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		AE88296B1F05B93D0076E520 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */,
-				AE88295A1F05AD210076E520 /* Info.plist */,
-				AE3FE3761F18559800B3364B /* GoogleService-Info.plist */,
-			);
-			name = Util;
 			sourceTree = "<group>";
 		};
 		F42A825925F8D32663615867 /* Frameworks */ = {
