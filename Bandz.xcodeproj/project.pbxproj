@@ -14,9 +14,11 @@
 		AE3FE3D51F1DA14300B3364B /* ShowsForBandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FE3D41F1DA14300B3364B /* ShowsForBandCell.swift */; };
 		AE3FE44B1F203A5000B3364B /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FE44A1F203A5000B3364B /* UIView+constraints.swift */; };
 		AE3FE44D1F203BDF00B3364B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FE44C1F203BDF00B3364B /* ViewController.swift */; };
-		AE5C74D21F22E2B1007076B3 /* InfoVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C74D11F22E2B1007076B3 /* InfoVenueViewController.swift */; };
 		AE5C74D41F237931007076B3 /* ShowsFeitosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */; };
 		AE5C74D61F237B05007076B3 /* ShowsFeitosVenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */; };
+		AE82F5751F37E9A9007F05CD /* Venue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE82F5741F37E9A9007F05CD /* Venue.storyboard */; };
+		AE82F5771F37ED2C007F05CD /* InfoVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */; };
+		AE82F5791F37EF31007F05CD /* InfoShowGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */; };
 		AE88294C1F05AD210076E520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88294B1F05AD210076E520 /* AppDelegate.swift */; };
 		AE8829511F05AD210076E520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE88294F1F05AD210076E520 /* Main.storyboard */; };
 		AE8829541F05AD210076E520 /* Bandz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */; };
@@ -40,9 +42,11 @@
 		AE3FE3D41F1DA14300B3364B /* ShowsForBandCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsForBandCell.swift; sourceTree = "<group>"; };
 		AE3FE44A1F203A5000B3364B /* UIView+constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		AE3FE44C1F203BDF00B3364B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE5C74D11F22E2B1007076B3 /* InfoVenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVenueViewController.swift; sourceTree = "<group>"; };
 		AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsFeitosTableViewController.swift; sourceTree = "<group>"; };
 		AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsFeitosVenueCell.swift; sourceTree = "<group>"; };
+		AE82F5741F37E9A9007F05CD /* Venue.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Venue.storyboard; sourceTree = "<group>"; };
+		AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVenueViewController.swift; sourceTree = "<group>"; };
+		AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoShowGalleryCell.swift; sourceTree = "<group>"; };
 		AE8829481F05AD210076E520 /* Bandz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE88294B1F05AD210076E520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE8829501F05AD210076E520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				AE8829671F05B3B40076E520 /* View */,
 				AE8829661F05B3A90076E520 /* Controller */,
 				AE88294F1F05AD210076E520 /* Main.storyboard */,
+				AE82F5741F37E9A9007F05CD /* Venue.storyboard */,
 				AE8829571F05AD210076E520 /* LaunchScreen.storyboard */,
 				AE8829551F05AD210076E520 /* Assets.xcassets */,
 			);
@@ -119,9 +124,9 @@
 		AE8829661F05B3A90076E520 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */,
 				AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */,
 				AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */,
-				AE5C74D11F22E2B1007076B3 /* InfoVenueViewController.swift */,
 				AE3FE44C1F203BDF00B3364B /* ViewController.swift */,
 				AE3FE44A1F203A5000B3364B /* UIView+constraints.swift */,
 				AE8829601F05AF4B0076E520 /* FeedBandaViewController.swift */,
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				AE3FE3D41F1DA14300B3364B /* ShowsForBandCell.swift */,
+				AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */,
 				AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */,
 				AE3FE3731F18277A00B3364B /* LoginVC.swift */,
 			);
@@ -224,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE82F5751F37E9A9007F05CD /* Venue.storyboard in Resources */,
 				AE8829591F05AD210076E520 /* LaunchScreen.storyboard in Resources */,
 				AE8829561F05AD210076E520 /* Assets.xcassets in Resources */,
 				AE8829511F05AD210076E520 /* Main.storyboard in Resources */,
@@ -291,12 +298,13 @@
 				AE88296A1F05B3EB0076E520 /* Band.swift in Sources */,
 				AE3FE3D51F1DA14300B3364B /* ShowsForBandCell.swift in Sources */,
 				AE5C74D41F237931007076B3 /* ShowsFeitosTableViewController.swift in Sources */,
+				AE82F5771F37ED2C007F05CD /* InfoVenueViewController.swift in Sources */,
+				AE82F5791F37EF31007F05CD /* InfoShowGalleryCell.swift in Sources */,
 				AE8829711F05CD140076E520 /* Show.swift in Sources */,
 				AE3FE44B1F203A5000B3364B /* UIView+constraints.swift in Sources */,
 				AEAE2C691F256E4500F13FA0 /* ShowDetalheViewController.swift in Sources */,
 				AE5C74D61F237B05007076B3 /* ShowsFeitosVenueCell.swift in Sources */,
 				AE3FE44D1F203BDF00B3364B /* ViewController.swift in Sources */,
-				AE5C74D21F22E2B1007076B3 /* InfoVenueViewController.swift in Sources */,
 				AE3FE3D31F1D9E7A00B3364B /* GlobalClasses.swift in Sources */,
 				AEAE2C911F27FE5C00F13FA0 /* APIManager.swift in Sources */,
 				AE8829541F05AD210076E520 /* Bandz.xcdatamodeld in Sources */,
