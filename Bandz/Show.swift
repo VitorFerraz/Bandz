@@ -10,23 +10,47 @@
 import UIKit
 
 
+
 class Show{
-  var id:String
-  var nomeHost:String
-  var estilos = [String]()
-  var logo:UIImage?
-  var data:String
-  var tipoLugar:String? //Casa de Show, Bar , Parque etc..
-  
-  var endereco:String?
-  
-  init(nomeHost :String, estilos:[String]) {
-    self.id = UUID().uuidString
-    self.nomeHost = nomeHost
-    self.estilos = estilos
-    self.tipoLugar = "Bar"
-    self.endereco = "Rua dos Palmares, 235"
-    self.data = "22/11/1994"
-    self.logo = UIImage(named: "logo1bandz.png")
-  }
+    //MARK: -  Propriedades
+
+    var id:String
+    var nomeHost:String?
+    var nomeShow:String
+    var estilos = [String]()
+    var logo:UIImage?
+    var data:String
+    var endereco:String?
+    var imagens:[UIImage]?
+    var descricao:String?
+    var capacidadeMax:Int?
+    
+    //MARK: -  Inicializador
+
+
+    
+    //Dummy init
+  init() {
+        self.id = UUID().uuidString
+        self.endereco = "Rua dos Palmares, 235"
+        self.data = "22/11/1994"
+        self.logo = UIImage(named: "logo1bandz.png")
+        self.estilos.append(contentsOf: ["Rock","Punk","Indie"])
+        self.imagens?.append(contentsOf: [#imageLiteral(resourceName: "casa_show"),#imageLiteral(resourceName: "casa_show2")])
+        self.nomeShow = "Noite das Panteras"
+        self.capacidadeMax = 100
+        self.descricao = "Localizado no bairro da Vila Madalena, há mais de 20 anos o Morrison Rock Bar é um clássico da cidade mais roqueira do Brasil. "
+    }
+    
+
+    
+    
+    
+    //MARK: -  Métodos
+    
+    func getEstilos()->[String]{
+        return estilos
+    }
+    
+    
 }

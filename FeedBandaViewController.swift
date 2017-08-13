@@ -11,8 +11,7 @@ import UIKit
 class FeedBandaViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
   //MARK: -  Propriedades
-  var store = ShowsStore()
-  var api = APIManager()
+
   
   //MARK: -  Outlets
   @IBOutlet weak var listaDeShows: UITableView!
@@ -24,7 +23,6 @@ class FeedBandaViewController: UIViewController,UITableViewDelegate,UITableViewD
     store.carregaShows()
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     self.navigationController?.hidesBarsOnSwipe = true
-    api.makeRequest(url: "")
     
   }
   
@@ -37,7 +35,7 @@ class FeedBandaViewController: UIViewController,UITableViewDelegate,UITableViewD
   
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return store.listaShows.count
+    return store.listaShows().count
   }
   
   
@@ -45,15 +43,18 @@ class FeedBandaViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     let cell = listaDeShows.dequeueReusableCell(withIdentifier: "ShowsForBandCell", for: indexPath) as! ShowsForBandCell
     
-    cell.logoVenue.image = store.listaShows[indexPath.row].logo
-    cell.nomeVenue.text = store.listaShows[indexPath.row].nomeHost
-    // cell.tipoLugar.text = store.listaShows[indexPath.row].tipoLugar
-    cell.endereco.text = store.listaShows[indexPath.row].endereco
-    cell.data.text = store.listaShows[indexPath.row].data
-    cell.estilo1.text = store.listaShows[indexPath.row].estilos[0]
-    cell.estilo2.text = store.listaShows[indexPath.row].estilos[1]
-    cell.estilo3.text = store.listaShows[indexPath.row].estilos[2]
+    cell.logoVenue.image = store.returnShowAt(index: indexPath.row).logo
+    cell.nomeVenue.text = store.returnShowAt(index: indexPath.row).nomeShow
     
+    
+    cell.endereco.text = store.returnShowAt(index: indexPath.row).endereco
+    
+    cell.data.text = store.returnShowAt(index: indexPath.row).data
+    
+    let estilos = store.returnShowAt(index: indexPath.row).getEstilos()
+    cell.estilo1.text = estilos[0]
+    cell.estilo2.text = estilos[1]
+    cell.estilo3.text = estilos[2]
     return cell
   }
   //MARK: -  Métodos
