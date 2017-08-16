@@ -27,11 +27,11 @@
 		AE88294C1F05AD210076E520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88294B1F05AD210076E520 /* AppDelegate.swift */; };
 		AE8829511F05AD210076E520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE88294F1F05AD210076E520 /* Main.storyboard */; };
 		AE8829541F05AD210076E520 /* Bandz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */; };
-		AE8829561F05AD210076E520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8829551F05AD210076E520 /* Assets.xcassets */; };
 		AE8829591F05AD210076E520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8829571F05AD210076E520 /* LaunchScreen.storyboard */; };
 		AE8829611F05AF4B0076E520 /* FeedBandaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829601F05AF4B0076E520 /* FeedBandaViewController.swift */; };
 		AE88296A1F05B3EB0076E520 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829691F05B3EB0076E520 /* Band.swift */; };
 		AE8829711F05CD140076E520 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829701F05CD140076E520 /* Show.swift */; };
+		AE9628401F43D085001A0B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE96283F1F43D085001A0B19 /* Assets.xcassets */; };
 		AEAE2C691F256E4500F13FA0 /* ShowDetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,12 +60,12 @@
 		AE88294B1F05AD210076E520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE8829501F05AD210076E520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE8829531F05AD210076E520 /* Bandz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bandz.xcdatamodel; sourceTree = "<group>"; };
-		AE8829551F05AD210076E520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE8829581F05AD210076E520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE88295A1F05AD210076E520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE8829601F05AF4B0076E520 /* FeedBandaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedBandaViewController.swift; path = ../FeedBandaViewController.swift; sourceTree = "<group>"; };
 		AE8829691F05B3EB0076E520 /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
 		AE8829701F05CD140076E520 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		AE96283F1F43D085001A0B19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetalheViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +163,6 @@
 				AE8829661F05B3A90076E520 /* Controller */,
 				AE88294F1F05AD210076E520 /* Main.storyboard */,
 				AE8829571F05AD210076E520 /* LaunchScreen.storyboard */,
-				AE8829551F05AD210076E520 /* Assets.xcassets */,
 			);
 			path = Bandz;
 			sourceTree = "<group>";
@@ -171,6 +170,7 @@
 		AE8829661F05B3A90076E520 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AE96283F1F43D085001A0B19 /* Assets.xcassets */,
 				AE39F19B1F40FBE9007377D5 /* Venue */,
 				AE39F19A1F40FBE3007377D5 /* Band */,
 			);
@@ -275,7 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE8829591F05AD210076E520 /* LaunchScreen.storyboard in Resources */,
-				AE8829561F05AD210076E520 /* Assets.xcassets in Resources */,
+				AE9628401F43D085001A0B19 /* Assets.xcassets in Resources */,
 				AE8829511F05AD210076E520 /* Main.storyboard in Resources */,
 				AE3FE3771F18559800B3364B /* GoogleService-Info.plist in Resources */,
 			);

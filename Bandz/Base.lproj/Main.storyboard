@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="51Y-kv-gzx">
-                                <rect key="frame" x="0.0" y="186" width="320" height="91"/>
+                                <rect key="frame" x="24" y="186" width="272" height="91"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miY-MA-mHF">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="41"/>
                                         <color key="backgroundColor" red="0.27479076390000001" green="0.5571715236" blue="0.89757764340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                                         <state key="normal" title="Perfil Banda">
@@ -37,14 +37,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zW-lz-2t7">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="41"/>
+                                        <rect key="frame" x="0.0" y="50" width="272" height="41"/>
                                         <color key="backgroundColor" red="0.27479076390000001" green="0.5571715236" blue="0.89757764340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                                         <state key="normal" title="Perfil Venue">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="flN-ch-Wje" kind="show" id="UAO-jD-sab"/>
+                                            <segue destination="F8w-zy-0Gl" kind="show" id="DC7-La-jZ9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -53,9 +53,9 @@
                         <color key="backgroundColor" red="0.11762935668230057" green="0.11765726655721664" blue="0.11762756854295731" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="51Y-kv-gzx" firstAttribute="centerX" secondItem="kH4-yC-3lP" secondAttribute="centerX" id="07j-wG-kFJ"/>
-                            <constraint firstAttribute="trailing" secondItem="51Y-kv-gzx" secondAttribute="trailing" id="SPd-oq-XtW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="51Y-kv-gzx" secondAttribute="trailing" constant="8" id="1F8-ve-qL2"/>
                             <constraint firstItem="51Y-kv-gzx" firstAttribute="top" secondItem="4oI-fu-MSN" secondAttribute="bottom" constant="166" id="VPr-hL-u09"/>
-                            <constraint firstItem="51Y-kv-gzx" firstAttribute="leading" secondItem="kH4-yC-3lP" secondAttribute="leading" id="tnG-Fd-2Pu"/>
+                            <constraint firstItem="51Y-kv-gzx" firstAttribute="leading" secondItem="kH4-yC-3lP" secondAttribute="leadingMargin" constant="8" id="isZ-DP-xX3"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -891,7 +891,7 @@
         <scene sceneID="W2u-5z-Ooz">
             <objects>
                 <navigationController id="NU8-3P-A6l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shows" id="fZ0-Zq-Jhq"/>
+                    <tabBarItem key="tabBarItem" title="Shows" image="icon_band_show" id="fZ0-Zq-Jhq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="NuU-3K-g44">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1048,10 +1048,11 @@
             </objects>
             <point key="canvasLocation" x="4586" y="-1"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Shows-->
         <scene sceneID="4e4-04-lxc">
             <objects>
                 <navigationController id="flN-ch-Wje" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shows" image="shows_venue" id="HZT-Nt-jAX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="gTu-HU-dBQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1062,7 +1063,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFg-MA-kxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="612"/>
+            <point key="canvasLocation" x="377" y="642"/>
         </scene>
         <!--Meus Shows-->
         <scene sceneID="PXJ-Xb-2HJ">
@@ -1129,6 +1130,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4DT-bL-IUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1164.375" y="720.42253521126759"/>
+        </scene>
+        <!--Propostas-->
+        <scene sceneID="BRN-Yw-hIi">
+            <objects>
+                <viewController id="3u0-Mb-wuy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="05f-YW-OVA"/>
+                        <viewControllerLayoutGuide type="bottom" id="8GB-3A-GK3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vt9-hf-zPs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Propostas" image="band_proposal" id="imv-DZ-nVB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbv-3w-gYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="1517"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WBy-2o-RVb">
+            <objects>
+                <tabBarController id="F8w-zy-0Gl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="vv5-4E-72d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3u0-Mb-wuy" kind="relationship" relationship="viewControllers" id="v2P-hS-w3H"/>
+                        <segue destination="flN-ch-Wje" kind="relationship" relationship="viewControllers" id="K3b-Ol-g8x"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dai-m7-Xbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495" y="780"/>
         </scene>
         <!--Criar Shows-->
         <scene sceneID="GNm-N0-dEc">
@@ -1218,8 +1256,11 @@
     </scenes>
     <resources>
         <image name="band" width="1024" height="768"/>
+        <image name="band_proposal" width="29" height="29"/>
         <image name="casa_show" width="5184" height="3456"/>
+        <image name="icon_band_show" width="29" height="29"/>
         <image name="icon_star" width="50" height="50"/>
         <image name="logo1bandz" width="800" height="800"/>
+        <image name="shows_venue" width="29" height="29"/>
     </resources>
 </document>
