@@ -19,10 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
-    FIRApp.configure()
+    FirebaseApp.configure()
     
       FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-  
+   // UINavigationBar.appearance().barTintColor = UIColor(red: 74/254, green: 144/254, blue: 226/254, alpha: 1)
+    UINavigationBar.appearance().tintColor = UIColor.white
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+    UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Helvetica Neue", size: 14)!], for: .normal)
+
+    
     return true
   }
   

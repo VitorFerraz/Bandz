@@ -71,8 +71,8 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
     guard let accessTokenString = accessToken?.tokenString else{
       return
     }
-    let credentials = FIRFacebookAuthProvider.credential(withAccessToken: accessTokenString)
-    FIRAuth.auth()?.signIn(with: credentials, completion: { (user, error) in
+    let credentials = FacebookAuthProvider.credential(withAccessToken: accessTokenString)
+    Auth.auth().signIn(with: credentials, completion: { (user, error) in
       if error != nil {
         print("Something went wrong with our FB user: ",error ?? "")
         return
@@ -96,7 +96,7 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
   
   @IBAction func createAccount(_ sender: UIButton) {
     if let email = emailTxt.text, let password = passwordTxt.text{
-      FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+      Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
         if let fireBaseError = error{
           print(fireBaseError.localizedDescription)
           return
@@ -112,7 +112,7 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
   
   @IBAction func loginAccount(_ sender: UIButton) {
     if let email = emailTxt.text, let password = passwordTxt.text{
-        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
           if let fireBaseError = error{
             print(fireBaseError.localizedDescription)
             return
@@ -128,7 +128,7 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
   
   func logged(){
     if user != nil{
-      performSegue(withIdentifier: "BandzApp", sender: Any?.self)
+      performSegue(withIdentifier: "home", sender: Any?.self)
     }
   }
   

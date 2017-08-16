@@ -22,7 +22,13 @@ class ShowsForBandCell: UITableViewCell {
   @IBOutlet weak var data: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-      self.logoVenue.layer.cornerRadius = self.logoVenue.frame.size.width / 2;
+      self.logoVenue.layer.cornerRadius = self.logoVenue.frame.size.width / 7
+      self.estilo1.layer.cornerRadius = self.logoVenue.frame.size.width / 7
+      self.estilo2.layer.cornerRadius = self.logoVenue.frame.size.width / 7
+      self.estilo3.layer.cornerRadius = self.logoVenue.frame.size.width / 7
+      
+
+
       
       
     }
