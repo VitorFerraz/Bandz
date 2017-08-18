@@ -13,6 +13,7 @@ target 'Bandz' do
 	pod 'Parchment'
         pod 'Alamofire', '~> 4.4'
         pod 'SwiftyJSON'
+	
 
 
 end

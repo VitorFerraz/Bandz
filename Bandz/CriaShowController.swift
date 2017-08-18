@@ -18,7 +18,9 @@ class CriaShowController: UIViewController {
     @IBOutlet weak var capacidadeMaximaShow: UITextField!
     @IBOutlet weak var enderecoShow: UITextField!
     @IBOutlet weak var nomeShow: UITextField!
-    
+  
+  
+  
     //MARK: -  Propriedades
     var nome:String?
     var descricao:String?
@@ -29,7 +31,9 @@ class CriaShowController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+      let testing : CGFloat = 1000
+      
     }
     
     override func didReceiveMemoryWarning() {

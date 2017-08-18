@@ -15,11 +15,10 @@ class ListaShowsViewController: UIViewController {
     @IBOutlet weak var tableViewShows: UITableView!
     
     //MARK: -  Propriedades
-    
+    var teste = "teste"
     //MARK: -  ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {

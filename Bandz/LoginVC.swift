@@ -19,7 +19,7 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
   var user:Any?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         let loginButton = FBSDKLoginButton()
       
       //TODO: Change to constrains

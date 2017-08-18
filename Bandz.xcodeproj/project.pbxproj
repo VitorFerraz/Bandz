@@ -19,6 +19,7 @@
 		AE3FE44D1F203BDF00B3364B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FE44C1F203BDF00B3364B /* ViewController.swift */; };
 		AE5C74D41F237931007076B3 /* ShowsFeitosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */; };
 		AE5C74D61F237B05007076B3 /* ShowsFeitosVenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */; };
+		AE6D00411F478E9A002AF6B0 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D00401F478E9A002AF6B0 /* FormViewController.swift */; };
 		AE82F5771F37ED2C007F05CD /* InfoVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */; };
 		AE82F5791F37EF31007F05CD /* InfoShowGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */; };
 		AE82F57C1F3BBE41007F05CD /* ShowStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F57B1F3BBE41007F05CD /* ShowStore.swift */; };
@@ -51,6 +52,7 @@
 		AE3FE44C1F203BDF00B3364B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsFeitosTableViewController.swift; sourceTree = "<group>"; };
 		AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsFeitosVenueCell.swift; sourceTree = "<group>"; };
+		AE6D00401F478E9A002AF6B0 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVenueViewController.swift; sourceTree = "<group>"; };
 		AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoShowGalleryCell.swift; sourceTree = "<group>"; };
 		AE82F57B1F3BBE41007F05CD /* ShowStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowStore.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		AE39F19B1F40FBE9007377D5 /* Venue */ = {
 			isa = PBXGroup;
 			children = (
+				AE6D00401F478E9A002AF6B0 /* FormViewController.swift */,
 				AE39F19E1F4105BA007377D5 /* ListaShowsViewController.swift */,
 				AE82F57D1F3BBFE3007F05CD /* CriaShowController.swift */,
 			);
@@ -348,6 +351,7 @@
 				AE82F5771F37ED2C007F05CD /* InfoVenueViewController.swift in Sources */,
 				AE82F5791F37EF31007F05CD /* InfoShowGalleryCell.swift in Sources */,
 				AE8829711F05CD140076E520 /* Show.swift in Sources */,
+				AE6D00411F478E9A002AF6B0 /* FormViewController.swift in Sources */,
 				AE3FE44B1F203A5000B3364B /* UIView+constraints.swift in Sources */,
 				AE39F19F1F4105BA007377D5 /* ListaShowsViewController.swift in Sources */,
 				AEAE2C691F256E4500F13FA0 /* ShowDetalheViewController.swift in Sources */,
