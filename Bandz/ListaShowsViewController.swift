@@ -33,6 +33,9 @@ class ListaShowsViewController: UIViewController {
     //MARK: -  Métodos
     
     //MARK: -  Actions
+  @IBAction func goHome(unwindSegue: UIStoryboardSegue){
+             
+  }
 
 }
 
@@ -43,16 +46,16 @@ extension ListaShowsViewController:UITableViewDataSource{
     }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return store.listaShows().count
+        return store.listEvents().count
     }
     
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VenueShowCell", for: indexPath)
-        let show  = store.returnShowAt(index: indexPath.row)
+        let show  = store.returnEventAt(index: indexPath.row)
 
-        cell.textLabel?.text = show.nomeShow
-        cell.detailTextLabel?.text = show.data
+        cell.textLabel?.text = show.nomeEvent
+        cell.detailTextLabel?.text = show.dataInicio
         
         return cell
     }

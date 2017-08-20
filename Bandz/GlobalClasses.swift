@@ -8,7 +8,7 @@
 
 import UIKit
 
-  var store = ShowStore()
+  var store = EventStore()
 
 func makeAlert(title:String,message:String,titleAction:String)->UIAlertController{
     // create the alert

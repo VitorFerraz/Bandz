@@ -46,9 +46,9 @@ class CriaShowController: UIViewController {
 
     @IBAction func criarShow(_ sender: UIButton) {
         validaCampos()
-        var show = Show()
-        store.addShow(newShow: show)
-    }
+        var event = Event()
+        store.addEvent(newEvent: event)
+  }
     
     func validaCampos(){
         if let nome = nomeShow.text{

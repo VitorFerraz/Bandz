@@ -13,6 +13,9 @@ target 'Bandz' do
 	pod 'Parchment'
         pod 'Alamofire', '~> 4.4'
         pod 'SwiftyJSON'
+ 	pod 'GooglePlaces'
+ 	pod 'GooglePlacePicker'
+ 	pod 'GoogleMaps'
 	
 
 

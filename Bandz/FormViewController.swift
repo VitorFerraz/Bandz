@@ -8,19 +8,26 @@
 
 import UIKit
 
+
 class FormViewController: UIViewController ,UITextFieldDelegate{
 
   
   //MARK: -  Outlets
   
+  @IBOutlet weak var listaEstilos: UITableView!
+  @IBOutlet weak var tituloshow: UITextField!
+  @IBOutlet weak var dataInicio: UITextField!
   @IBOutlet weak var dataFim: UITextField!
-  //MARK: -  Propriedades
   
+  //MARK: -  Propriedades
+  var placeID:String?
   //MARK: -  ViewLifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     dataFim.delegate = self
+    dataInicio.delegate = self
+    tituloshow.delegate = self
     
   }
   
@@ -32,23 +39,44 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
   func datePickerChanged(sender: UIDatePicker) {
     let formatter = DateFormatter()
     formatter.dateStyle = .full
-    dataFim.text = formatter.string(from: sender.date)
+    if sender.tag == 1{
+      dataInicio.text = formatter.string(from: sender.date)
+
+    }else{
+      dataFim.text = formatter.string(from: sender.date)
+
+    }
     
-    print("Try this at home")
   }
 
   //MARK: UITextViewDelegate
   //Metodo disparado quando uma textview entra em foco
   func textFieldDidBeginEditing(_ textField: UITextField) {
+   
     let datePicker = UIDatePicker()
-    textField.inputView = datePicker
+    if dataInicio == textField {
+      datePicker.tag = 1
+       textField.inputView = datePicker
+      
+    }else if dataFim == textField{
+       datePicker.tag = 2
+       textField.inputView = datePicker
+    }
+
+    
+
     datePicker.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
 
     
     print("This Worked")
   }
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    dataFim.resignFirstResponder()
+    if textField == dataFim{
+       dataFim.resignFirstResponder()
+    }else{
+      dataInicio.resignFirstResponder()
+    }
+   
     return true
   }
   
@@ -59,6 +87,7 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
   
   // MARK: Touch Events
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
     closekeyboard()
   }
   
@@ -70,7 +99,19 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
 
 
   //MARK: -  Actions
+  
+  @IBAction func createEvent(_ sender: UIButton) {
+    store.eventTmp = Event()
+    store.eventTmp?.dataInicio = dataInicio.text
+    store.eventTmp?.dataTermino = dataFim.text
+    
+    store.eventTmp?.nomeEvent = tituloshow.text
+    store.eventTmp?.estilos?.append("Rock")
+    store.eventTmp?.placeId = placeID
+    
+   
+    
+  }
 
 }
-
 
