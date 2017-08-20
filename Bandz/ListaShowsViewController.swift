@@ -15,6 +15,7 @@ class ListaShowsViewController: UIViewController {
     @IBOutlet weak var tableViewShows: UITableView!
     
     //MARK: -  Propriedades
+  var eventCreatedAlert:UIAlertController?
     var teste = "teste"
     //MARK: -  ViewLifeCycle
     override func viewDidLoad() {
@@ -28,13 +29,23 @@ class ListaShowsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableViewShows.reloadData()
+      
     }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    if eventCreatedAlert != nil{
+      present(eventCreatedAlert!, animated: true, completion: nil)
+    }
+    
+  }
 
     //MARK: -  Métodos
     
     //MARK: -  Actions
   @IBAction func goHome(unwindSegue: UIStoryboardSegue){
-             
+    eventCreatedAlert = makeAlert(title: "Evento Criado!", message: "Evento criado com sucesso", titleAction: "Ok")
+    
+    
   }
 
 }
@@ -51,12 +62,12 @@ extension ListaShowsViewController:UITableViewDataSource{
     
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VenueShowCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VenueShowCell", for: indexPath) as! VenueEventCell
         let show  = store.returnEventAt(index: indexPath.row)
-
-        cell.textLabel?.text = show.nomeEvent
-        cell.detailTextLabel?.text = show.dataInicio
-        
+      
+        cell.titulo.text = show.nomeEvent
+        cell.data.text = show.dataInicio
+        cell.imageEvent.image = show.logo
         return cell
     }
 

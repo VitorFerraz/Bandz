@@ -47,7 +47,7 @@ class CreateEventFormViewController: UIViewController,UITextFieldDelegate {
     store.eventTmp?.valor = Double(valor.text!)
     
     store.addEvent(newEvent: store.eventTmp!)
-    
+    dump(store.eventTmp)
     
     
     
