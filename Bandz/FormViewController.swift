@@ -54,6 +54,7 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
   func textFieldDidBeginEditing(_ textField: UITextField) {
    
     let datePicker = UIDatePicker()
+    datePicker.locale = Locale(identifier: "pt_BR")
     if dataInicio == textField {
       datePicker.tag = 1
        textField.inputView = datePicker
@@ -101,13 +102,13 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
   //MARK: -  Actions
   
   @IBAction func createEvent(_ sender: UIButton) {
-    store.eventTmp = Event()
-    store.eventTmp?.dataInicio = dataInicio.text
-    store.eventTmp?.dataTermino = dataFim.text
+    storeEvent.eventTmp = Event()
+    storeEvent.eventTmp?.dataInicio = dataInicio.text
+    storeEvent.eventTmp?.dataTermino = dataFim.text
     
-    store.eventTmp?.nomeEvent = tituloshow.text
-    store.eventTmp?.estilos?.append("Rock")
-    store.eventTmp?.placeId = placeID
+    storeEvent.eventTmp?.nomeEvent = tituloshow.text
+    storeEvent.eventTmp?.estilos?.append("Rock")
+    storeEvent.eventTmp?.placeId = placeID
     
    
     

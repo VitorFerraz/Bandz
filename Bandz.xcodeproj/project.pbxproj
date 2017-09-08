@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		454DF11234D68B5322263CC5 /* Pods_Bandz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA84161C9FFCD084352AFA4 /* Pods_Bandz.framework */; };
+		AE3771221F4CCE13000BA21D /* FeedProposalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3771211F4CCE13000BA21D /* FeedProposalViewController.swift */; };
 		AE39F19D1F41014F007377D5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE39F19C1F41014F007377D5 /* Extensions.swift */; };
 		AE39F19F1F4105BA007377D5 /* ListaShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE39F19E1F4105BA007377D5 /* ListaShowsViewController.swift */; };
 		AE39F1A71F41072C007377D5 /* VenueEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE39F1A61F41072C007377D5 /* VenueEventCell.swift */; };
+		AE3E47211F5CBC1800B2D417 /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E471F1F5CBC1800B2D417 /* TesteViewController.swift */; };
+		AE3E47221F5CBC1800B2D417 /* TesteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3E47201F5CBC1800B2D417 /* TesteViewController.xib */; };
 		AE3FE3741F18277A00B3364B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FE3731F18277A00B3364B /* LoginVC.swift */; };
 		AE3FE3771F18559800B3364B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE3FE3761F18559800B3364B /* GoogleService-Info.plist */; };
 		AE3FE3D31F1D9E7A00B3364B /* GlobalClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3FE3D21F1D9E7A00B3364B /* GlobalClasses.swift */; };
@@ -20,7 +23,6 @@
 		AE5C74D41F237931007076B3 /* ShowsFeitosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */; };
 		AE5C74D61F237B05007076B3 /* ShowsFeitosVenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */; };
 		AE6D00411F478E9A002AF6B0 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D00401F478E9A002AF6B0 /* FormViewController.swift */; };
-		AE6D00471F47B6DA002AF6B0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D00461F47B6DA002AF6B0 /* MapViewController.swift */; };
 		AE82F5771F37ED2C007F05CD /* InfoVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */; };
 		AE82F5791F37EF31007F05CD /* InfoShowGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */; };
 		AE82F57C1F3BBE41007F05CD /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F57B1F3BBE41007F05CD /* EventStore.swift */; };
@@ -36,15 +38,23 @@
 		AE9628401F43D085001A0B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE96283F1F43D085001A0B19 /* Assets.xcassets */; };
 		AEAE2C691F256E4500F13FA0 /* ShowDetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */; };
 		AEBE00A01F4A3C590028F8E4 /* CreateEventFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE009F1F4A3C590028F8E4 /* CreateEventFormViewController.swift */; };
+		AEE95D061F4C4D1300D24E25 /* ManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE95D051F4C4D1300D24E25 /* ManagerAPI.swift */; };
+		AEE95D0B1F4C525800D24E25 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE95D0A1F4C525800D24E25 /* User.swift */; };
+		AEE95D0D1F4C63C100D24E25 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE95D0C1F4C63C100D24E25 /* Host.swift */; };
+		AEE95D0F1F4C796300D24E25 /* Proposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE95D0E1F4C796300D24E25 /* Proposal.swift */; };
+		AEE95D111F4C797500D24E25 /* ProposalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE95D101F4C797500D24E25 /* ProposalStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10EFD39D933AACA576A190CC /* Pods-Bandz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bandz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bandz/Pods-Bandz.release.xcconfig"; sourceTree = "<group>"; };
 		69820BC968A0E9AFDBF1D2F0 /* Pods-Bandz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bandz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bandz/Pods-Bandz.debug.xcconfig"; sourceTree = "<group>"; };
 		6AA84161C9FFCD084352AFA4 /* Pods_Bandz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bandz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3771211F4CCE13000BA21D /* FeedProposalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedProposalViewController.swift; sourceTree = "<group>"; };
 		AE39F19C1F41014F007377D5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AE39F19E1F4105BA007377D5 /* ListaShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaShowsViewController.swift; sourceTree = "<group>"; };
 		AE39F1A61F41072C007377D5 /* VenueEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueEventCell.swift; sourceTree = "<group>"; };
+		AE3E471F1F5CBC1800B2D417 /* TesteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
+		AE3E47201F5CBC1800B2D417 /* TesteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TesteViewController.xib; sourceTree = "<group>"; };
 		AE3FE3731F18277A00B3364B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AE3FE3751F182E6000B3364B /* Bandz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bandz.entitlements; sourceTree = "<group>"; };
 		AE3FE3761F18559800B3364B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -55,7 +65,6 @@
 		AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsFeitosTableViewController.swift; sourceTree = "<group>"; };
 		AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsFeitosVenueCell.swift; sourceTree = "<group>"; };
 		AE6D00401F478E9A002AF6B0 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
-		AE6D00461F47B6DA002AF6B0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVenueViewController.swift; sourceTree = "<group>"; };
 		AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoShowGalleryCell.swift; sourceTree = "<group>"; };
 		AE82F57B1F3BBE41007F05CD /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
@@ -73,6 +82,11 @@
 		AE96283F1F43D085001A0B19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetalheViewController.swift; sourceTree = "<group>"; };
 		AEBE009F1F4A3C590028F8E4 /* CreateEventFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventFormViewController.swift; sourceTree = "<group>"; };
+		AEE95D051F4C4D1300D24E25 /* ManagerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerAPI.swift; sourceTree = "<group>"; };
+		AEE95D0A1F4C525800D24E25 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AEE95D0C1F4C63C100D24E25 /* Host.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		AEE95D0E1F4C796300D24E25 /* Proposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proposal.swift; sourceTree = "<group>"; };
+		AEE95D101F4C797500D24E25 /* ProposalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,8 @@
 		AE39F1991F40FBAB007377D5 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				AE3E471F1F5CBC1800B2D417 /* TesteViewController.swift */,
+				AE3E47201F5CBC1800B2D417 /* TesteViewController.xib */,
 				AE39F19C1F41014F007377D5 /* Extensions.swift */,
 				AE3FE44A1F203A5000B3364B /* UIView+constraints.swift */,
 				AE3FE3D21F1D9E7A00B3364B /* GlobalClasses.swift */,
@@ -109,10 +125,10 @@
 		AE39F19A1F40FBE3007377D5 /* Band */ = {
 			isa = PBXGroup;
 			children = (
+				AE3FE44C1F203BDF00B3364B /* ViewController.swift */,
 				AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */,
 				AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */,
 				AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */,
-				AE3FE44C1F203BDF00B3364B /* ViewController.swift */,
 				AE8829601F05AF4B0076E520 /* FeedBandaViewController.swift */,
 				AE82F57F1F3D0187007F05CD /* ContatoVenueViewController.swift */,
 			);
@@ -126,6 +142,7 @@
 				AE6D00401F478E9A002AF6B0 /* FormViewController.swift */,
 				AE39F19E1F4105BA007377D5 /* ListaShowsViewController.swift */,
 				AE82F57D1F3BBFE3007F05CD /* CriaShowController.swift */,
+				AE3771211F4CCE13000BA21D /* FeedProposalViewController.swift */,
 			);
 			name = Venue;
 			sourceTree = "<group>";
@@ -134,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				AE82F57B1F3BBE41007F05CD /* EventStore.swift */,
+				AEE95D101F4C797500D24E25 /* ProposalStore.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -160,17 +178,18 @@
 			isa = PBXGroup;
 			children = (
 				AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */,
+				AE96283F1F43D085001A0B19 /* Assets.xcassets */,
 				AE88295A1F05AD210076E520 /* Info.plist */,
 				AE3FE3761F18559800B3364B /* GoogleService-Info.plist */,
 				AE3FE3751F182E6000B3364B /* Bandz.entitlements */,
 				AE88294B1F05AD210076E520 /* AppDelegate.swift */,
+				AEE95D071F4C4D1A00D24E25 /* API */,
 				AE39F1991F40FBAB007377D5 /* Other */,
 				AE82F57A1F3BBE11007F05CD /* DataStore */,
 				AE8829681F05B3B80076E520 /* Model */,
 				AE8829671F05B3B40076E520 /* View */,
 				AE8829661F05B3A90076E520 /* Controller */,
 				AE88294F1F05AD210076E520 /* Main.storyboard */,
-				AE6D00461F47B6DA002AF6B0 /* MapViewController.swift */,
 				AE8829571F05AD210076E520 /* LaunchScreen.storyboard */,
 			);
 			path = Bandz;
@@ -179,7 +198,7 @@
 		AE8829661F05B3A90076E520 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AE96283F1F43D085001A0B19 /* Assets.xcassets */,
+				AE3FE3731F18277A00B3364B /* LoginVC.swift */,
 				AE39F19B1F40FBE9007377D5 /* Venue */,
 				AE39F19A1F40FBE3007377D5 /* Band */,
 			);
@@ -193,7 +212,6 @@
 				AE39F1A61F41072C007377D5 /* VenueEventCell.swift */,
 				AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */,
 				AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */,
-				AE3FE3731F18277A00B3364B /* LoginVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -202,9 +220,20 @@
 			isa = PBXGroup;
 			children = (
 				AE8829691F05B3EB0076E520 /* Band.swift */,
+				AEE95D0C1F4C63C100D24E25 /* Host.swift */,
 				AE8829701F05CD140076E520 /* Event.swift */,
+				AEE95D0A1F4C525800D24E25 /* User.swift */,
+				AEE95D0E1F4C796300D24E25 /* Proposal.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		AEE95D071F4C4D1A00D24E25 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AEE95D051F4C4D1300D24E25 /* ManagerAPI.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		F42A825925F8D32663615867 /* Frameworks */ = {
@@ -286,6 +315,7 @@
 				AE8829591F05AD210076E520 /* LaunchScreen.storyboard in Resources */,
 				AE9628401F43D085001A0B19 /* Assets.xcassets in Resources */,
 				AE8829511F05AD210076E520 /* Main.storyboard in Resources */,
+				AE3E47221F5CBC1800B2D417 /* TesteViewController.xib in Resources */,
 				AE3FE3771F18559800B3364B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,9 +329,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bandz/Pods-Bandz-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Versions/A/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -314,9 +349,34 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bandz/Pods-Bandz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -329,13 +389,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bandz-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -345,22 +408,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE95D061F4C4D1300D24E25 /* ManagerAPI.swift in Sources */,
 				AE8829611F05AF4B0076E520 /* FeedBandaViewController.swift in Sources */,
 				AE82F57E1F3BBFE3007F05CD /* CriaShowController.swift in Sources */,
+				AEE95D0B1F4C525800D24E25 /* User.swift in Sources */,
 				AE82F57C1F3BBE41007F05CD /* EventStore.swift in Sources */,
 				AE82F5801F3D0187007F05CD /* ContatoVenueViewController.swift in Sources */,
 				AE3FE3741F18277A00B3364B /* LoginVC.swift in Sources */,
 				AE88296A1F05B3EB0076E520 /* Band.swift in Sources */,
+				AE3E47211F5CBC1800B2D417 /* TesteViewController.swift in Sources */,
 				AE3FE3D51F1DA14300B3364B /* ShowsForBandCell.swift in Sources */,
+				AE3771221F4CCE13000BA21D /* FeedProposalViewController.swift in Sources */,
 				AE39F19D1F41014F007377D5 /* Extensions.swift in Sources */,
 				AE5C74D41F237931007076B3 /* ShowsFeitosTableViewController.swift in Sources */,
-				AE6D00471F47B6DA002AF6B0 /* MapViewController.swift in Sources */,
 				AE82F5771F37ED2C007F05CD /* InfoVenueViewController.swift in Sources */,
 				AE82F5791F37EF31007F05CD /* InfoShowGalleryCell.swift in Sources */,
 				AE8829711F05CD140076E520 /* Event.swift in Sources */,
+				AEE95D0F1F4C796300D24E25 /* Proposal.swift in Sources */,
 				AE6D00411F478E9A002AF6B0 /* FormViewController.swift in Sources */,
 				AE3FE44B1F203A5000B3364B /* UIView+constraints.swift in Sources */,
 				AE39F19F1F4105BA007377D5 /* ListaShowsViewController.swift in Sources */,
+				AEE95D0D1F4C63C100D24E25 /* Host.swift in Sources */,
+				AEE95D111F4C797500D24E25 /* ProposalStore.swift in Sources */,
 				AEAE2C691F256E4500F13FA0 /* ShowDetalheViewController.swift in Sources */,
 				AE5C74D61F237B05007076B3 /* ShowsFeitosVenueCell.swift in Sources */,
 				AE3FE44D1F203BDF00B3364B /* ViewController.swift in Sources */,

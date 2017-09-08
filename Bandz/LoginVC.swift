@@ -19,7 +19,8 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
   var user:Any?
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+      var api = ManagerAPI()
+      api.getUsersById(id: "1")
         let loginButton = FBSDKLoginButton()
       
       //TODO: Change to constrains

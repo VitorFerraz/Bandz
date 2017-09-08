@@ -5,8 +5,7 @@ class ViewController: UIViewController,PagingOptions {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Load each of the view controllers you want to embed
+        // Load each of the view controllers you want to embed
     // from the storyboard.
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let firstViewController = storyboard.instantiateViewController(withIdentifier: "InfoVenueViewController")

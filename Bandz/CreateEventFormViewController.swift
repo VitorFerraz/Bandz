@@ -40,15 +40,17 @@ class CreateEventFormViewController: UIViewController,UITextFieldDelegate {
   
   //MARK: -  Actions
   @IBAction func createEvent(_ sender: UIButton) {
-    store.eventTmp?.descricao = mensagem.text
-    store.eventTmp?.endereco = local.text
-    store.eventTmp?.idade = Int(idadeMinima.text!)
-    store.eventTmp?.placeId = placeID
-    store.eventTmp?.valor = Double(valor.text!)
+    storeEvent.eventTmp?.descricao = mensagem.text
+    storeEvent.eventTmp?.endereco = local.text
+    storeEvent.eventTmp?.idade = Int(idadeMinima.text!)
+    storeEvent.eventTmp?.placeId = placeID
+    storeEvent.eventTmp?.valor = Double(valor.text!)
     
-    store.addEvent(newEvent: store.eventTmp!)
-    dump(store.eventTmp)
+    storeEvent.addEvent(newEvent: storeEvent.eventTmp!)
+    dump(storeEvent.eventTmp)
     
+    
+    storeEvent.createEvent()
     
     
   }

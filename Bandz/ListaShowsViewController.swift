@@ -57,13 +57,13 @@ extension ListaShowsViewController:UITableViewDataSource{
     }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return store.listEvents().count
+        return storeEvent.listEvents().count
     }
     
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VenueShowCell", for: indexPath) as! VenueEventCell
-        let show  = store.returnEventAt(index: indexPath.row)
+        let show  = storeEvent.returnEventAt(index: indexPath.row)
       
         cell.titulo.text = show.nomeEvent
         cell.data.text = show.dataInicio

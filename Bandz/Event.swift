@@ -43,7 +43,7 @@ class Event{
   }
     
 //    //Dummy init
-//  init() {
+//   init() {
 //        self.id = UUID().uuidString
 //        self.endereco = "Rua dos Palmares, 235"
 //        self.data = "22/11/1994"
@@ -53,14 +53,15 @@ class Event{
 //        self.nomeShow = "Noite das Panteras"
 //        self.capacidadeMax = 100
 //        self.descricao = "Localizado no bairro da Vila Madalena, há mais de 20 anos o Morrison Rock Bar é um clássico da cidade mais roqueira do Brasil. "
-//    }
+//      self.init()
+//  }
 
     
     
     //MARK: -  Métodos
     
     func getEstilos()->[String]{
-        return estilos!
+        return ["Rock","Punk","Indie"]
     }
     
     

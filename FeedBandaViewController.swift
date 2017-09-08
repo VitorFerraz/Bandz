@@ -35,7 +35,7 @@ class FeedBandaViewController: UIViewController,UITableViewDelegate,UITableViewD
   
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return store.listEvents().count
+    return storeEvent.listEvents().count
   }
   
   
@@ -43,15 +43,15 @@ class FeedBandaViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     let cell = listaDeShows.dequeueReusableCell(withIdentifier: "ShowsForBandCell", for: indexPath) as! ShowsForBandCell
     
-    cell.logoVenue.image = store.returnEventAt(index: indexPath.row).logo
-    cell.nomeVenue.text = store.returnEventAt(index: indexPath.row).nomeEvent
+    cell.logoVenue.image = storeEvent.returnEventAt(index: indexPath.row).logo
+    cell.nomeVenue.text = storeEvent.returnEventAt(index: indexPath.row).nomeEvent
     
     
-    cell.endereco.text = store.returnEventAt(index: indexPath.row).endereco
+    cell.endereco.text = storeEvent.returnEventAt(index: indexPath.row).endereco
     
-    cell.data.text = store.returnEventAt(index: indexPath.row).dataInicio
+    cell.data.text = storeEvent.returnEventAt(index: indexPath.row).dataInicio
     
-    let estilos = store.returnEventAt(index: indexPath.row).getEstilos()
+    let estilos = storeEvent.returnEventAt(index: indexPath.row).getEstilos()
     cell.estilo1.text = estilos[0]
     cell.estilo2.text = estilos[1]
     cell.estilo3.text = estilos[2]
