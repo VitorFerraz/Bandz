@@ -14,6 +14,9 @@ class EventStore{
     var eventTmp:Event?
     var api = ManagerAPI()
   
+  var lisfOfGenre:[String] = []
+		
+  
     init() {
         loadEvents()
       eventTmp = Event()
@@ -35,7 +38,18 @@ class EventStore{
     func returnEventAt(index:Int)->Event{
         return events[index]
     }
+  
+  
+  func loadListOfGenre(){
+   
+    api.getMusicGenre(completion: { (list) in
+    self.lisfOfGenre = list!
+   })
     
+    
+
+  }
+  
     
     func loadEvents(){
         for _ in 1...6{

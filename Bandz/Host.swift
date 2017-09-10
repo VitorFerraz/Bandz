@@ -6,4 +6,15 @@
 //  Copyright © 2017 Bandz. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Host:User{
+  
+  var idHost:Int?
+  var max_capacity:Int?
+  var locationId:Int?
+  init(nome:String,sobreNome:String,email:String) {
+    idHost = 1
+    super.init(id: idHost!, nome: nome, sobreNome: sobreNome, email: email, type: "h")
+  }
+}

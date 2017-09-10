@@ -1371,7 +1371,7 @@
                                         <rect key="frame" x="20" y="161" width="248" height="173"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5NQ-M6-2mD" style="IBUITableViewCellStyleDefault" id="HcL-k9-k7h">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="5NQ-M6-2mD" style="IBUITableViewCellStyleDefault" id="HcL-k9-k7h">
                                                 <rect key="frame" x="0.0" y="28" width="248" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HcL-k9-k7h" id="Uiv-GM-qGd">
@@ -1460,7 +1460,7 @@
                     <connections>
                         <outlet property="dataFim" destination="1R0-sd-6jL" id="taK-AO-BEw"/>
                         <outlet property="dataInicio" destination="iZI-AZ-h0H" id="9kr-gx-wdT"/>
-                        <outlet property="listaEstilos" destination="UAI-OS-TLE" id="Zug-r6-qKP"/>
+                        <outlet property="estilosTableView" destination="UAI-OS-TLE" id="fED-3H-ls2"/>
                         <outlet property="tituloshow" destination="SQF-DZ-R9z" id="jxY-mb-ThK"/>
                     </connections>
                 </viewController>

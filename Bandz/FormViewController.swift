@@ -14,7 +14,7 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
   
   //MARK: -  Outlets
   
-  @IBOutlet weak var listaEstilos: UITableView!
+  @IBOutlet weak var estilosTableView: UITableView!
   @IBOutlet weak var tituloshow: UITextField!
   @IBOutlet weak var dataInicio: UITextField!
   @IBOutlet weak var dataFim: UITextField!
@@ -29,6 +29,15 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
     dataInicio.delegate = self
     tituloshow.delegate = self
     
+    estilosTableView.dataSource = self
+    estilosTableView.delegate = self
+    
+    dump(storeEvent.lisfOfGenre)
+    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    estilosTableView.reloadData()
   }
   
   override func didReceiveMemoryWarning() {
@@ -114,5 +123,27 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
     
   }
 
+}
+
+extension FormViewController:UITableViewDelegate{
+  
+}
+
+extension FormViewController:UITableViewDataSource{
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = estilosTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    cell.textLabel?.text = storeEvent.lisfOfGenre[indexPath.row]
+    return cell
+  }
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return storeEvent.lisfOfGenre.count
+  }
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
+
+  
 }
 

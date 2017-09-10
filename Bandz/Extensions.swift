@@ -6,7 +6,7 @@
 //  Copyright © 2017 Bandz. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 //How to use 
@@ -22,6 +22,17 @@ extension Date
             return dateFormatter.string(from: self)
         }
         
+}
+
+func makeAlert(title:String,message:String,titleAction:String)->UIAlertController{
+  // create the alert
+  let alert = UIAlertController(title: "\(title)", message: "\(message)", preferredStyle: UIAlertControllerStyle.alert)
+  
+  if titleAction != ""{
+    // add an action (button)
+    alert.addAction(UIAlertAction(title: "\(titleAction)", style: UIAlertActionStyle.default, handler: nil))
+  }
+  return alert
 }
 
 

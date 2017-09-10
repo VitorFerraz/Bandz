@@ -8,9 +8,10 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class ManagerAPI{
-  let url = "https://bandz-startup.herokuapp.com/api/users/"
+  let url = "https://bandz-startup.herokuapp.com/api/"
   
   func getUsersById(id:String){
     Alamofire.request("\(url)\(id)/").responseJSON { response in
@@ -27,6 +28,33 @@ class ManagerAPI{
       }
     }
   }
+  
+
+  func getMusicGenre(completion: @escaping ([String]?) -> Void){
+    Alamofire.request("\(url)music-genres").responseJSON { response in
+
+      
+      if let json = response.result.value {
+        print("JSON: \(json)") // serialized json response
+        let json = JSON(json)
+        let arrayNames =  json.arrayValue.map({$0["name"].stringValue})
+        completion(arrayNames)
+        return
+      }
+
+      if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+        print("Data: \(utf8Text)") // original server data as UTF8 string
+        completion(nil)
+        return
+      }
+      
+
+    }
+
+
+  }
+  
+ 
   
   
   func createEvent(){

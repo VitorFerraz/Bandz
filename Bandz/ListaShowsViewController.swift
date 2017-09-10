@@ -20,7 +20,8 @@ class ListaShowsViewController: UIViewController {
     //MARK: -  ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+        storeEvent.loadListOfGenre()
+  }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
