@@ -30,7 +30,7 @@ class ManagerAPI{
   }
   
 
-  func getMusicGenre(completion: @escaping ([String]?) -> Void){
+  func getMusicGenre(completion: @escaping ([GenreType]?) -> Void){
     Alamofire.request("\(url)music-genres").responseJSON { response in
 
       
@@ -38,7 +38,15 @@ class ManagerAPI{
       //  print("JSON: \(json)") // serialized json response
         let json = JSON(json)
         let arrayNames =  json.arrayValue.map({$0["name"].stringValue})
-        completion(arrayNames)
+        let arrayID =  json.arrayValue.map({$0["id"].stringValue})
+        var genreList:[GenreType]? = []
+        for (index,genero) in arrayNames.enumerated(){
+          
+          genreList?.append(GenreType(nome: genero, id: Int(arrayID[index])!))
+        }
+
+        
+        completion(genreList)
         return
       }
 
@@ -108,23 +116,12 @@ class ManagerAPI{
   }
   
   func createEvent(event:Event){
-    
-//    {
-//      "host": null,
-//      "music_genres": [],
-//      "name": "",
-//      "description": "",
-//      "url": "",
-//      "starts_at": null,
-//      "ends_at": null,
-//      "min_age": null,
-//      "price": null
-//    }
+
     
     
     let parametersEvent: Parameters = [
       "host": 1, // id
-      "music_genres": [],//array string
+      "music_genres": ["1","2","3"],//array string
       "name": event.nomeEvento, //nome do evento
       "description": event.descricao, //descricao
       "url": "https://www.google.com", // url https://www
@@ -134,6 +131,7 @@ class ManagerAPI{
       "price": event.valor //
 
     ]
+    print(info.estilos)
     print("Parms")
     dump(parametersEvent)
     
@@ -142,12 +140,48 @@ class ManagerAPI{
       print(response)
     }
 
-    
-    
-    
-    
-//    Alamofire.request("https://bandz-startup.herokuapp.com/api/events/", method: .post, parameters: parametersHost, encoding: JSONEncoding.default)
+  }
+  
+  func loadEvents(){
+    Alamofire.request("https://bandz-startup.herokuapp.com/api/events/").responseJSON { response in
+      print("Request: \(String(describing: response.request))")   // original url request
+      print("Response: \(String(describing: response.response))") // http url response
+      print("Result: \(response.result)")                         // response serialization result
+//      var novoEvento = Event(hostID: 1, estilos: info.estilos, nomeEvento: info.tituloEvento, descricao: mensagem.text, url: "https://www.google.com", dataInicio: info.dataInicioEvento, dataTermino: info.dataFimEvento, idade: Int(idadeMinima.text!)!, valor: Double(valor.text!)!)
 
+      if let json = response.result.value {
+        print("JSON: \(json)") // serialized json response
+        var dataJSON = JSON(json)
+        
+        let nameEvent = dataJSON.arrayValue.map({$0["name"].stringValue})
+        let url = dataJSON.arrayValue.map({$0["url"].stringValue})
+        let dataInicio = dataJSON.arrayValue.map({$0["starts_at"].stringValue})
+        let dataFinal = dataJSON.arrayValue.map({$0["ends_at"].stringValue})
+        let descricao = dataJSON.arrayValue.map({$0["description"].stringValue})
+        let generos = dataJSON.arrayValue.map({$0["music_genres"].stringValue})
+        let idade = dataJSON.arrayValue.map({$0["min_age"].stringValue})
+        let preco = dataJSON.arrayValue.map({$0["price"].stringValue})
+        let status = dataJSON.arrayValue.map({$0["confirmed"].stringValue})
+        
+         if storeEvent.events.count == 0{
+        
+        for (index,event) in nameEvent.enumerated(){
+        let novoEvento = Event(hostID: 1, estilos: [generos[index]], nomeEvento: event, descricao: descricao[index], url: url[index], dataInicio: Date(), dataTermino: Date(), idade: Int(idade[index])!, valor: Double(preco[index])!)
+         
+            storeEvent.events.append(novoEvento)
+
+          
+          dump(novoEvento)
+        }
+      }
+        print("array events")
+
+      }
+      
+      if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+        print("Data: \(utf8Text)") // original server data as UTF8 string
+      }
+    }
   }
 
 }

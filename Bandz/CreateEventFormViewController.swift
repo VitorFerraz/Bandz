@@ -45,6 +45,8 @@ class CreateEventFormViewController: UIViewController,UITextFieldDelegate {
     var novoEvento = Event(hostID: 1, estilos: info.estilos, nomeEvento: info.tituloEvento, descricao: mensagem.text, url: "https://www.google.com", dataInicio: info.dataInicioEvento, dataTermino: info.dataFimEvento, idade: Int(idadeMinima.text!)!, valor: Double(valor.text!)!)
     storeEvent.addEvent(newEvent: novoEvento)
     
+    
+    
     dump(novoEvento)
     
     

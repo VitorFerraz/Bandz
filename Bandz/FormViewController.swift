@@ -131,7 +131,7 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
     }
     
     
-    info.estilos.append("Indie")
+    //info.estilos.append("1")
     
     if let nomeEvento =  tituloshow.text{
       info.tituloEvento = nomeEvento
@@ -152,9 +152,14 @@ extension FormViewController:UITableViewDelegate{
 }
 
 extension FormViewController:UITableViewDataSource{
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    info.estilos.append(String(storeEvent.lisfOfGenre[indexPath.row].id))
+    print(info.estilos)
+  }
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = estilosTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    cell.textLabel?.text = storeEvent.lisfOfGenre[indexPath.row]
+    cell.textLabel?.text = storeEvent.lisfOfGenre[indexPath.row].nome
     return cell
   }
 

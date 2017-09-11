@@ -14,7 +14,7 @@ class EventStore{
     var eventTmp:Event?
     var api = ManagerAPI()
   
-  var lisfOfGenre:[String] = []
+  var lisfOfGenre:[GenreType] = []
 		
   
     init() {
@@ -44,6 +44,7 @@ class EventStore{
   func loadListOfGenre(){
    
     api.getMusicGenre(completion: { (list) in
+      print(list)
     self.lisfOfGenre = list!
    })
     

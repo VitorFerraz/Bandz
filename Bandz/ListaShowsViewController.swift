@@ -21,8 +21,10 @@ class ListaShowsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         storeEvent.loadListOfGenre()
+      api.loadEvents()
+
   }
-    
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

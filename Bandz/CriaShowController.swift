@@ -34,7 +34,6 @@ class CriaShowController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       let delegateInfo = FormViewController()
-
       let testing : CGFloat = 1000
       delegateInfo.delegate = self
       
