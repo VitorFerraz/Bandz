@@ -44,12 +44,12 @@ class FeedBandaViewController: UIViewController,UITableViewDelegate,UITableViewD
     let cell = listaDeShows.dequeueReusableCell(withIdentifier: "ShowsForBandCell", for: indexPath) as! ShowsForBandCell
     
     cell.logoVenue.image = storeEvent.returnEventAt(index: indexPath.row).logo
-    cell.nomeVenue.text = storeEvent.returnEventAt(index: indexPath.row).nomeEvent
+    cell.nomeVenue.text = storeEvent.returnEventAt(index: indexPath.row).nomeEvento
     
     
-    cell.endereco.text = storeEvent.returnEventAt(index: indexPath.row).endereco
+    cell.endereco.text = "pegar do host"
     
-    cell.data.text = storeEvent.returnEventAt(index: indexPath.row).dataInicio
+    cell.data.text = "em "
     
     let estilos = storeEvent.returnEventAt(index: indexPath.row).getEstilos()
     cell.estilo1.text = estilos[0]

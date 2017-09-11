@@ -9,6 +9,13 @@
 import UIKit
 
 
+struct InfoShow {
+  var estilos:[String] = []
+  var dataInicioEvento:Date!
+  var dataFimEvento:Date!
+  var tituloEvento:String!
+}
+
 class FormViewController: UIViewController ,UITextFieldDelegate{
 
   
@@ -20,7 +27,9 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
   @IBOutlet weak var dataFim: UITextField!
   
   //MARK: -  Propriedades
-  var placeID:String?
+  let datePicker = UIDatePicker()
+  
+  var delegate:DelegateInfoShow?
   //MARK: -  ViewLifeCycle
   
   override func viewDidLoad() {
@@ -31,7 +40,9 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
     
     estilosTableView.dataSource = self
     estilosTableView.delegate = self
-    
+    datePicker.locale = Locale(identifier: "pt_BR")
+    datePicker.datePickerMode = .date
+
     dump(storeEvent.lisfOfGenre)
     
   }
@@ -47,7 +58,7 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
   //MARK: -  Métodos
   func datePickerChanged(sender: UIDatePicker) {
     let formatter = DateFormatter()
-    formatter.dateStyle = .full
+    formatter.dateFormat = "dd/MM/yyyy"
     if sender.tag == 1{
       dataInicio.text = formatter.string(from: sender.date)
 
@@ -62,7 +73,6 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
   //Metodo disparado quando uma textview entra em foco
   func textFieldDidBeginEditing(_ textField: UITextField) {
    
-    let datePicker = UIDatePicker()
     datePicker.locale = Locale(identifier: "pt_BR")
     if dataInicio == textField {
       datePicker.tag = 1
@@ -110,15 +120,27 @@ class FormViewController: UIViewController ,UITextFieldDelegate{
 
   //MARK: -  Actions
   
-  @IBAction func createEvent(_ sender: UIButton) {
-    storeEvent.eventTmp = Event()
-    storeEvent.eventTmp?.dataInicio = dataInicio.text
-    storeEvent.eventTmp?.dataTermino = dataFim.text
+  @IBAction func pegaInfoEvent(_ sender: UIButton) {
+    info = InfoShow()
+      if let dataFim = dataFim.text?.stringToDate(){
+        info.dataFimEvento = dataFim
+    }
     
-    storeEvent.eventTmp?.nomeEvent = tituloshow.text
-    storeEvent.eventTmp?.estilos?.append("Rock")
-    storeEvent.eventTmp?.placeId = placeID
+    if let dataInicio = dataInicio.text?.stringToDate(){
+      info.dataInicioEvento = dataInicio
+    }
     
+    
+    info.estilos.append("Indie")
+    
+    if let nomeEvento =  tituloshow.text{
+      info.tituloEvento = nomeEvento
+
+    }
+    
+    print("show info",info)
+
+    self.delegate?.infoShow(infos: info)
    
     
   }
@@ -145,5 +167,9 @@ extension FormViewController:UITableViewDataSource{
   }
 
   
+}
+
+protocol DelegateInfoShow {
+  func infoShow(infos:InfoShow)
 }
 

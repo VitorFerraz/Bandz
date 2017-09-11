@@ -22,7 +22,7 @@ class FeedProposalViewController: UIViewController {
   @IBOutlet weak var valorProposta: UILabel!
   var divisor :CGFloat!
   //MARK: -  Propriedades
-  var currentCard = storeProposal.proposals[0]
+  var currentCard = storeProposition.propositions[0]
   
   //MARK: -  ViewLifeCycle
   
@@ -30,11 +30,14 @@ class FeedProposalViewController: UIViewController {
     super.viewDidLoad()
     divisor = (view.frame.width/2) / 0.61
     // nomeBanda.text = currentCard?.nomeBanda
-    dump(storeProposal)
+    
+    api.getPropositions {
+      
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    if (storeProposal.proposals.isEmpty){
+    if (storeProposition.propositions.isEmpty){
       
       self.nomeBanda.text = "Sem nenhuma nova proposta as propostas"
       self.valorProposta.text = ""
@@ -121,13 +124,13 @@ class FeedProposalViewController: UIViewController {
       self.card.transform = CGAffineTransform.identity
       
     }) { (voltou) in
-      if (storeProposal.proposals.count == 0){
+      if (storeProposition.propositions.count == 0){
         
         self.nomeBanda.text = "Sem nenhuma nova proposta as propostas"
         self.valorProposta.text = ""
         self.estiloBanda.text = ""
       }else{
-        self.nomeBanda.text = "\(storeProposal.proposals[0].nomeBanda!)"
+        self.nomeBanda.text = "\(storeProposition.propositions[0].nomeBanda!)"
         //self.valorProposta.text = "\(storeProposal.proposals[0].valorCache!)"
         // self.estiloBanda.text = "Rock"
       }

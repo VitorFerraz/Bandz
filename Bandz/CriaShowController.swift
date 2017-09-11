@@ -27,12 +27,16 @@ class CriaShowController: UIViewController {
     var endereco:String?
     var capacidade:Int?
     var data:String?
+
+  var infoShow:InfoShow = InfoShow()
     //MARK: -  ViewLifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      let delegateInfo = FormViewController()
 
       let testing : CGFloat = 1000
+      delegateInfo.delegate = self
       
     }
     
@@ -46,8 +50,8 @@ class CriaShowController: UIViewController {
 
     @IBAction func criarShow(_ sender: UIButton) {
         validaCampos()
-        var event = Event()
-        storeEvent.addEvent(newEvent: event)
+      
+     //   storeEvent.addEvent(newEvent: Event)
   }
     
     func validaCampos(){
@@ -84,4 +88,17 @@ class CriaShowController: UIViewController {
 
         
     }
+}
+
+
+extension CriaShowController: DelegateInfoShow{
+  func infoShow(infos: InfoShow) {
+    infoShow.tituloEvento = infos.tituloEvento!
+    print("teste show delegate",infoShow.tituloEvento)
+  }
+
+  
+
+  
+  
 }

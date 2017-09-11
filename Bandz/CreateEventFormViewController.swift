@@ -23,12 +23,14 @@ class CreateEventFormViewController: UIViewController,UITextFieldDelegate {
   
   //MARK: -  Propriedades
   var placeID:String?
+  let estilos:[String] = []
+
   
   //MARK: -  ViewLifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.local.delegate = self
+    //self.local.delegate = self
     
   }
   
@@ -40,17 +42,13 @@ class CreateEventFormViewController: UIViewController,UITextFieldDelegate {
   
   //MARK: -  Actions
   @IBAction func createEvent(_ sender: UIButton) {
-    storeEvent.eventTmp?.descricao = mensagem.text
-    storeEvent.eventTmp?.endereco = local.text
-    storeEvent.eventTmp?.idade = Int(idadeMinima.text!)
-    storeEvent.eventTmp?.placeId = placeID
-    storeEvent.eventTmp?.valor = Double(valor.text!)
+    var novoEvento = Event(hostID: 1, estilos: info.estilos, nomeEvento: info.tituloEvento, descricao: mensagem.text, url: "https://www.google.com", dataInicio: info.dataInicioEvento, dataTermino: info.dataFimEvento, idade: Int(idadeMinima.text!)!, valor: Double(valor.text!)!)
+    storeEvent.addEvent(newEvent: novoEvento)
     
-    storeEvent.addEvent(newEvent: storeEvent.eventTmp!)
-    dump(storeEvent.eventTmp)
+    dump(novoEvento)
     
     
-    storeEvent.createEvent()
+    
     
     
   }

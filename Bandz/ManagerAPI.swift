@@ -35,7 +35,7 @@ class ManagerAPI{
 
       
       if let json = response.result.value {
-        print("JSON: \(json)") // serialized json response
+      //  print("JSON: \(json)") // serialized json response
         let json = JSON(json)
         let arrayNames =  json.arrayValue.map({$0["name"].stringValue})
         completion(arrayNames)
@@ -54,32 +54,96 @@ class ManagerAPI{
 
   }
   
- 
-  
-  
-  func createEvent(){
-    
-    let parametersLocation: Parameters = [
-      "place_id":"JNKADKJUHR80089fidnh302irnh0",
-      "street": "Rua Augusta",
-      "number": "243",
-      "state": "SP",
-      "country": "Brazil",
-     
-    ]
-    
-    let parametersHost: Parameters = [
-      "name":"Teste Vitor",
-      "starts_at": "1990-11-11T11:11:00Z",
-      "ends_at": "1900-11-11T11:11:00Z",
-      "url": "https://www.google.com",
-      "location": 1,
-      "host": 1
-    ]
+  func getPropositions(completion: @escaping () -> Void){
+    Alamofire.request("\(url)propositions").responseJSON { response in
       
-      Alamofire.request("https://bandz-startup.herokuapp.com/api/events/", method: .post, parameters: parametersLocation, encoding: JSONEncoding.default)
+      
+      
+      
+      if let json = response.result.value {
+        
+        let json = JSON(json)
+        let bandJSON = json[0]["band"].rawString()?.replacingOccurrences(of: "'", with: "\"")
+        
+        var nome = convertToDictionary(text: bandJSON!)
+       // var band = JSON.parse(bandJSON!)
+        print("teste",nome?["name"] ?? "erro")
+
+        completion()
+        return
+      }
+      
+      if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+        print("Data: \(utf8Text)") // original server data as UTF8 string
+        completion()
+        return
+      }
+    }
+  }
+  
+  func createPropositions(proposition:Proposition){
+//  {
+//    "band": null,
+//    "host": null,
+//    "event": null,
+//    "message": "",
+//    "price": null,
+//    "confirmed": null
+//    }
+    
+    let parametersProposition: Parameters = [
+      "band":2,
+      "host": 1,
+      "event": 1,
+      "message": proposition.mensagem!,
+      "price": proposition.valorCache!,
+      "confirmed": proposition.status!
+    ]
+    
+    print(parametersProposition)
+    
+    Alamofire.request("https://bandz-startup.herokuapp.com/api/propositions/", method: .post, parameters: parametersProposition, encoding: JSONEncoding.default)
     
 
+  }
+  
+  func createEvent(event:Event){
+    
+//    {
+//      "host": null,
+//      "music_genres": [],
+//      "name": "",
+//      "description": "",
+//      "url": "",
+//      "starts_at": null,
+//      "ends_at": null,
+//      "min_age": null,
+//      "price": null
+//    }
+    
+    
+    let parametersEvent: Parameters = [
+      "host": 1, // id
+      "music_genres": [],//array string
+      "name": event.nomeEvento, //nome do evento
+      "description": event.descricao, //descricao
+      "url": "https://www.google.com", // url https://www
+      "starts_at": "2017-01-16T20:00:00Z", //
+      "ends_at": "2017-03-16T20:00:00Z", //
+      "min_age":event.idade, //
+      "price": event.valor //
+
+    ]
+    print("Parms")
+    dump(parametersEvent)
+    
+    Alamofire.request("https://bandz-startup.herokuapp.com/api/events/", method: .post, parameters: parametersEvent, encoding: JSONEncoding.default, headers: ["Content-Type" :"application/json"]).responseJSON {
+      (response) in
+      print(response)
+    }
+
+    
+    
     
     
 //    Alamofire.request("https://bandz-startup.herokuapp.com/api/events/", method: .post, parameters: parametersHost, encoding: JSONEncoding.default)
@@ -87,7 +151,16 @@ class ManagerAPI{
   }
 
 }
-
+func convertToDictionary(text: String) -> [String: Any]? {
+  if let data = text.data(using: .utf8) {
+    do {
+      return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+    } catch {
+      print(error.localizedDescription)
+    }
+  }
+  return nil
+}
 
 enum Funcionality:String {
   case user = "users"

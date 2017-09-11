@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ProposalStore{
-  var proposals: [Proposal] = []
+class PropositionStore{
+  var propositions: [Proposition] = []
   
   init() {
     loadProposal()
@@ -17,11 +17,18 @@ class ProposalStore{
   
   func loadProposal(){
     for i in 1...7{
-      var p = Proposal(nomeBanda: "Banda do Portal", valorCache: 10.0, mensagem: "lreom lorem lorem lorem")
+      var p = Proposition(nomeBanda: "Banda do Portal", valorCache: 10.0, mensagem: "lreom lorem lorem lorem")
       
       p.status = false
       
-      proposals.append(p)
+      propositions.append(p)
     }
+  }
+  
+  
+  func addProposition(newProposition:Proposition){
+    self.propositions.append(newProposition)
+    api.createPropositions(proposition: newProposition)
+
   }
 }

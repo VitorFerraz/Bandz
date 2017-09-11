@@ -19,7 +19,7 @@ class ContatoVenueViewController: UIViewController {
     @IBOutlet weak var mensagemTextArea: UITextView!
     //MARK: -  Propriedades
     var nomeBanda:String = ""
-    var valorShow:Double?
+    var valorShow:Double? = 0
     var mensagem:String = ""
     
     //MARK: -  ViewLifeCycle
@@ -39,8 +39,14 @@ class ContatoVenueViewController: UIViewController {
     @IBAction func enviarProposta(_ sender: UIButton) {
         
         if validaCampos() == true {
-            
-            var proposta = Proposal(nomeBanda: nomeBanda, valorCache: valorShow!, mensagem: mensagem)
+          
+          nomeBanda = nomeBandaTfd.text!
+          valorShow = Double(cacheShowTfd.text!)
+          mensagem = mensagemTextArea.text
+
+            var proposta = Proposition(nomeBanda: nomeBanda, valorCache: valorShow!, mensagem: mensagem)
+          
+            storeProposition.addProposition(newProposition: proposta)
           
             //Alert
             let alert  = makeAlert(title: "Proposta Enviada com Sucesso", message: "Logo a casa de show irá entrar em contato com sua banda!", titleAction: "Ok")

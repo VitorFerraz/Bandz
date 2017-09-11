@@ -36,6 +36,7 @@ class ListaShowsViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     if eventCreatedAlert != nil{
       present(eventCreatedAlert!, animated: true, completion: nil)
+      eventCreatedAlert = nil
     }
     
   }
@@ -66,8 +67,8 @@ extension ListaShowsViewController:UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "VenueShowCell", for: indexPath) as! VenueEventCell
         let show  = storeEvent.returnEventAt(index: indexPath.row)
       
-        cell.titulo.text = show.nomeEvent
-        cell.data.text = show.dataInicio
+        cell.titulo.text = show.nomeEvento
+        cell.data.text = "Data de Inicio: \(show.dataInicio.toString(dateFormat: "MM/dd/yyyy"))"
         cell.imageEvent.image = show.logo
         return cell
     }

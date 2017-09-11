@@ -8,11 +8,10 @@
 
 import UIKit
 
-class Proposal{
+class Proposition{
   var nomeBanda:String?
   var valorCache:Double?
   var mensagem:String?
-  
   var status:Bool?
   
   init(nomeBanda:String,valorCache:Double,mensagem:String) {

@@ -9,8 +9,9 @@
 import UIKit
 
   var storeEvent = EventStore()
-  var storeProposal = ProposalStore()
+  var storeProposition = PropositionStore()
   var api = ManagerAPI()
+  var info:InfoShow = InfoShow()
 
 
 
