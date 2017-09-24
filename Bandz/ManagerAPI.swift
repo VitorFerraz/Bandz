@@ -12,7 +12,11 @@ import SwiftyJSON
 
 class ManagerAPI{
   let url = "https://bandz-startup.herokuapp.com/api/"
-  
+    
+
+  init(){
+
+  }
   func getUsersById(id:String){
     Alamofire.request("\(url)\(id)/").responseJSON { response in
       print("Request: \(String(describing: response.request))")   // original url request
@@ -64,18 +68,36 @@ class ManagerAPI{
   
   func getPropositions(completion: @escaping () -> Void){
     Alamofire.request("\(url)propositions").responseJSON { response in
-      
-      
-      
-      
+
       if let json = response.result.value {
         
         let json = JSON(json)
-        let bandJSON = json[0]["band"].rawString()?.replacingOccurrences(of: "'", with: "\"")
+        _ =  json.arrayValue.map({
         
-        var nome = convertToDictionary(text: bandJSON!)
-       // var band = JSON.parse(bandJSON!)
-        print("teste",nome?["name"] ?? "erro")
+        let bandJSON = $0["band"].stringValue.replacingOccurrences(of: "'", with: "\"")
+        print(bandJSON)
+
+        var nome = convertToDictionary(text:bandJSON)
+        print("nome",nome)
+        print("nome f ",nome!["name"] as! String)
+        let nomeBand = nome!["name"] as! String
+          let valorCache = Double($0["price"].stringValue)
+          let mensagem = $0["message"].stringValue
+          let status = Bool($0["confirmed"].stringValue)
+          
+          
+          
+          // var band = JSON.parse(bandJSON!)
+          // print("teste",nome?["name"] ?? "erro")
+          
+          let propositon = Proposition(nomeBanda: nomeBand as! String , valorCache: valorCache!, mensagem: mensagem, status: status!)
+          
+          storeProposition.propositions.append(propositon)
+        })
+
+       dump(storeProposition.propositions)
+        
+     
 
         completion()
         return
@@ -117,8 +139,6 @@ class ManagerAPI{
   
   func createEvent(event:Event){
 
-    
-    
     let parametersEvent: Parameters = [
       "host": 1, // id
       "music_genres": ["1","2","3"],//array string
@@ -184,7 +204,13 @@ class ManagerAPI{
     }
   }
 
+  func updatePreposition(){
+    
+  }
 }
+
+
+
 func convertToDictionary(text: String) -> [String: Any]? {
   if let data = text.data(using: .utf8) {
     do {

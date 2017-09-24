@@ -15,12 +15,14 @@ class ShowDetalheViewController: UIViewController {
   @IBOutlet weak var imageVenue: UIImageView!
   
   //MARK: -  Propriedades
+    var show:Event!
   
   //MARK: -  ViewLifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationController?.hidesBarsOnSwipe = true
+    self.title = show.nomeEvento
+     self.navigationController?.hidesBarsOnSwipe = true
     
   }
   

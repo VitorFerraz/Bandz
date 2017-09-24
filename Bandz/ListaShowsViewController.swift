@@ -20,10 +20,11 @@ class ListaShowsViewController: UIViewController {
     //MARK: -  ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        storeEvent.loadListOfGenre()
-      api.loadEvents()
+      storeEvent.loadListOfGenre()
 
   }
+  
+
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,6 +33,7 @@ class ListaShowsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tableViewShows.reloadData()
+     
       
     }
   

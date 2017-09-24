@@ -53,7 +53,7 @@ class Event{
     self.dataTermino = dataTermino
     self.idade = idade
     self.valor = valor
-    self.imagens =  [#imageLiteral(resourceName: "casa_show"),#imageLiteral(resourceName: "casa_show2")]
+    self.imagens =  [UIImage(named: "logo1bandz.png")!,UIImage(named: "logo1bandz.png")!]
     self.logo = UIImage(named: "logo1bandz.png")!
     
     

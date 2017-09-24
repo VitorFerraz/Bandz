@@ -19,7 +19,9 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
   var user:Any?
     override func viewDidLoad() {
         super.viewDidLoad()
-      var api = ManagerAPI()
+      api.loadEvents()
+        api.getPropositions {}
+
       api.getUsersById(id: "1")
         let loginButton = FBSDKLoginButton()
       
@@ -46,7 +48,7 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
       print(result?.token.tokenString ?? "")
       self.user = result
       self.showEmail()
-      self.logged()
+    //  self.logged()
 
       
     }
@@ -121,7 +123,7 @@ class LoginVC: UIViewController,FBSDKLoginButtonDelegate {
           
           print("You sing in with your account")
           self.user = user
-          self.logged()
+         // self.logged()
           
         })
     }

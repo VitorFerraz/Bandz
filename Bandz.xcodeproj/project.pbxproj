@@ -23,6 +23,7 @@
 		AE5C74D41F237931007076B3 /* ShowsFeitosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */; };
 		AE5C74D61F237B05007076B3 /* ShowsFeitosVenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */; };
 		AE6D00411F478E9A002AF6B0 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D00401F478E9A002AF6B0 /* FormViewController.swift */; };
+		AE7D337A1F783D1E000A090D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7D33791F783D1D000A090D /* Assets.xcassets */; };
 		AE82F5771F37ED2C007F05CD /* InfoVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */; };
 		AE82F5791F37EF31007F05CD /* InfoShowGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */; };
 		AE82F57C1F3BBE41007F05CD /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE82F57B1F3BBE41007F05CD /* EventStore.swift */; };
@@ -35,7 +36,6 @@
 		AE8829611F05AF4B0076E520 /* FeedBandaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829601F05AF4B0076E520 /* FeedBandaViewController.swift */; };
 		AE88296A1F05B3EB0076E520 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829691F05B3EB0076E520 /* Band.swift */; };
 		AE8829711F05CD140076E520 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8829701F05CD140076E520 /* Event.swift */; };
-		AE9628401F43D085001A0B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE96283F1F43D085001A0B19 /* Assets.xcassets */; };
 		AEAE2C691F256E4500F13FA0 /* ShowDetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */; };
 		AEBE00A01F4A3C590028F8E4 /* CreateEventFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE009F1F4A3C590028F8E4 /* CreateEventFormViewController.swift */; };
 		AEDAD3501F66143C00FFCF63 /* GenreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDAD34F1F66143C00FFCF63 /* GenreList.swift */; };
@@ -66,6 +66,7 @@
 		AE5C74D31F237931007076B3 /* ShowsFeitosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsFeitosTableViewController.swift; sourceTree = "<group>"; };
 		AE5C74D51F237B05007076B3 /* ShowsFeitosVenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowsFeitosVenueCell.swift; sourceTree = "<group>"; };
 		AE6D00401F478E9A002AF6B0 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		AE7D33791F783D1D000A090D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE82F5761F37ED2C007F05CD /* InfoVenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVenueViewController.swift; sourceTree = "<group>"; };
 		AE82F5781F37EF31007F05CD /* InfoShowGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoShowGalleryCell.swift; sourceTree = "<group>"; };
 		AE82F57B1F3BBE41007F05CD /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		AE8829601F05AF4B0076E520 /* FeedBandaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedBandaViewController.swift; path = ../FeedBandaViewController.swift; sourceTree = "<group>"; };
 		AE8829691F05B3EB0076E520 /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
 		AE8829701F05CD140076E520 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		AE96283F1F43D085001A0B19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEAE2C681F256E4500F13FA0 /* ShowDetalheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetalheViewController.swift; sourceTree = "<group>"; };
 		AEBE009F1F4A3C590028F8E4 /* CreateEventFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventFormViewController.swift; sourceTree = "<group>"; };
 		AEDAD34F1F66143C00FFCF63 /* GenreList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreList.swift; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 		AE88294A1F05AD210076E520 /* Bandz */ = {
 			isa = PBXGroup;
 			children = (
+				AE7D33791F783D1D000A090D /* Assets.xcassets */,
 				AE8829521F05AD210076E520 /* Bandz.xcdatamodeld */,
-				AE96283F1F43D085001A0B19 /* Assets.xcassets */,
 				AE88295A1F05AD210076E520 /* Info.plist */,
 				AE3FE3761F18559800B3364B /* GoogleService-Info.plist */,
 				AE3FE3751F182E6000B3364B /* Bandz.entitlements */,
@@ -316,10 +316,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE8829591F05AD210076E520 /* LaunchScreen.storyboard in Resources */,
-				AE9628401F43D085001A0B19 /* Assets.xcassets in Resources */,
 				AE8829511F05AD210076E520 /* Main.storyboard in Resources */,
 				AE3E47221F5CBC1800B2D417 /* TesteViewController.xib in Resources */,
 				AE3FE3771F18559800B3364B /* GoogleService-Info.plist in Resources */,
+				AE7D337A1F783D1E000A090D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

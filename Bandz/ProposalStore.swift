@@ -21,7 +21,7 @@ class PropositionStore{
       
       p.status = false
       
-      propositions.append(p)
+     // propositions.append(p)
     }
   }
   

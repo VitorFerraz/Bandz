@@ -17,31 +17,37 @@ class FeedProposalViewController: UIViewController {
   @IBOutlet weak var card: UIView!
   @IBOutlet weak var thumbImageView: UIImageView!
   @IBOutlet weak var nomeBanda: UILabel!
-  @IBOutlet weak var estiloBanda: UILabel!
-  
   @IBOutlet weak var valorProposta: UILabel!
+  
+    @IBOutlet weak var stackPrice: UIStackView!
+    @IBOutlet weak var mensagem: UITextView!
+  
   var divisor :CGFloat!
   //MARK: -  Propriedades
-  var currentCard = storeProposition.propositions[0]
+  var currentCardNumber = 0
+  //var currentCard = storeProposition.propositions[0]
   
   //MARK: -  ViewLifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     divisor = (view.frame.width/2) / 0.61
+  
     // nomeBanda.text = currentCard?.nomeBanda
-    
-    api.getPropositions {
-      
-    }
+
+   
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    if (storeProposition.propositions.isEmpty){
-      
-      self.nomeBanda.text = "Sem nenhuma nova proposta as propostas"
-      self.valorProposta.text = ""
-      self.estiloBanda.text = ""
+    
+    if (storeProposition.propositions.count == 0) || self.currentCardNumber == storeProposition.propositions.count {
+        self.noMoreCard()
+        
+    }else{
+      self.nomeBanda.text = storeProposition.propositions[currentCardNumber].nomeBanda
+      self.valorProposta.text = "\(String(describing: storeProposition.propositions[currentCardNumber].valorCache!))"
+        self.mensagem.text = storeProposition.propositions[currentCardNumber].mensagem
+    
     }
   }
   
@@ -87,6 +93,7 @@ class FeedProposalViewController: UIViewController {
             card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
             card.alpha = 0
             self.nextProposal()
+
           })
           
           return
@@ -96,7 +103,6 @@ class FeedProposalViewController: UIViewController {
             card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
             card.alpha = 0
             self.nextProposal()
-            
             
             
           })
@@ -122,20 +128,33 @@ class FeedProposalViewController: UIViewController {
       self.card.center = self.view.center
       self.card.alpha = 1
       self.card.transform = CGAffineTransform.identity
-      
-    }) { (voltou) in
-      if (storeProposition.propositions.count == 0){
+        self.currentCardNumber += 1
+
+        if (storeProposition.propositions.count == 0) || self.currentCardNumber == storeProposition.propositions.count {
+            self.noMoreCard()
+            return
+        }
+        self.stackPrice.isHidden = false
+
+        self.nomeBanda.text = storeProposition.propositions[self.currentCardNumber].nomeBanda
+        self.valorProposta.text = "\(String(describing: storeProposition.propositions[self.currentCardNumber].valorCache!))"
+        self.mensagem.text = storeProposition.propositions[self.currentCardNumber].mensagem
+        print(storeProposition.propositions[self.currentCardNumber].mensagem)
+        print(self.currentCardNumber)
         
-        self.nomeBanda.text = "Sem nenhuma nova proposta as propostas"
-        self.valorProposta.text = ""
-        self.estiloBanda.text = ""
-      }else{
-        self.nomeBanda.text = "\(storeProposition.propositions[0].nomeBanda!)"
-        //self.valorProposta.text = "\(storeProposal.proposals[0].valorCache!)"
-        // self.estiloBanda.text = "Rock"
-      }
+        
+    }) { (voltou) in
+        
+
     }
   }
+    func noMoreCard(){
+       self.currentCardNumber  = 0
+        self.stackPrice.isHidden = true
+        self.mensagem.text = "Sem nenhuma nova proposta as propostas"
+        self.valorProposta.text = ""
+        self.nomeBanda.text = "Acabou as Propostas"
+    }
   
     func resetCard(){
       

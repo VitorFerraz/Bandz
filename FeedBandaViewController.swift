@@ -20,11 +20,30 @@ class FeedBandaViewController: UIViewController,UITableViewDelegate,UITableViewD
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    //store.carregaShows()
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     self.navigationController?.hidesBarsOnSwipe = true
+    listaDeShows.delegate = self
+    listaDeShows.dataSource = self
+    dump(storeEvent.events)
+    
+    api.getPropositions {}
     
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+   
+    print(storeEvent.events)
+    print("total",storeEvent.events.count)
+    listaDeShows.reloadData()
+  }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetalheShow"{
+            if let destination = segue.destination as? ShowDetalheViewController{
+                destination.show = sender as? Event
+            }
+        }
+    }
   
   
   
@@ -32,24 +51,32 @@ class FeedBandaViewController: UIViewController,UITableViewDelegate,UITableViewD
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let show  = storeEvent.events[indexPath.row]
+        performSegue(withIdentifier: "goToDetalheShow", sender: show)
+    }
   
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return storeEvent.listEvents().count
+    return storeEvent.events.count
   }
   
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
+  
     let cell = listaDeShows.dequeueReusableCell(withIdentifier: "ShowsForBandCell", for: indexPath) as! ShowsForBandCell
     
-    cell.logoVenue.image = storeEvent.returnEventAt(index: indexPath.row).logo
-    cell.nomeVenue.text = storeEvent.returnEventAt(index: indexPath.row).nomeEvento
+    let show  = storeEvent.returnEventAt(index: indexPath.row)
+
+    
+    cell.logoVenue.image = show.logo
+    cell.nomeVenue.text = show.nomeEvento
     
     
-    cell.endereco.text = "pegar do host"
+//    cell.endereco.text = 
     
-    cell.data.text = "em "
+    cell.data.text = show.dataInicio.toString(dateFormat: "dd/mm/YYYY")
     
     let estilos = storeEvent.returnEventAt(index: indexPath.row).getEstilos()
     cell.estilo1.text = estilos[0]

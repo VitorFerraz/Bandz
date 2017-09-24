@@ -21,6 +21,13 @@ class Proposition{
     self.status = false
   }
   
+  init(nomeBanda:String,valorCache:Double,mensagem:String,status:Bool) {
+    self.nomeBanda = nomeBanda
+    self.valorCache = valorCache
+    self.mensagem = mensagem
+    self.status = status
+  }
+  
   
   
   
